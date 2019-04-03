@@ -25,13 +25,33 @@
 
     <!-- NAVBAR
     ================================================= -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-togglable  fixed-top " id="mainNav">
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-dark navbar-togglable fixed-top " id="mainNav">
         <div class="container">
 
             <!-- Brand -->
             <a class="navbar-brand js-scroll-trigger" href="http://127.0.0.1:8000">
-                <h2>iCoffee</h2>
+                <h2 style="color:#000">iCoffee</h2>
             </a>
+
+             <!-- Toggler -->
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon-bar">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                </button>
+    
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <!-- Links -->
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                            <a href="#page-top" class="btn btn-secondary btn-block pt-4">^</a>
+    
+                            </li>
+                        </ul>
+                </div>
+                
+                <!-- / .navbar-collapse -->
 
         </div>
         <!-- / .container -->
@@ -39,31 +59,6 @@
 
     <!-- HERO
     ================================================== -->
-    <section class="section section-top section-full page-header">
-
-        <!-- Cover -->
-        <div class="bg-cover" style="background-image: url({% static 'assets/img/portfolio/ig.jpg' %});"></div>
-
-        <!-- Overlay -->
-        <div class="bg-overlay"></div>
-        <!-- Content -->
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-10 col-lg-7 ">
-                    <div class="page-content">
-
-                        <!-- Heading -->
-                        <h1 class="text-white text-center mb-4 display-4">
-                            Mercado Libre
-                        </h1>
-
-                    </div>
-                </div>
-            </div>
-            <!-- / .row -->
-        </div>
-        <!-- / .container -->
-    </section>
 
     <!-- SECTIONS
     ================================================== -->
@@ -73,7 +68,12 @@
     <section class="section" id="single-portfolio">
         <div class="container">
             <div class="row justify-content-center">
+                    <br><br><br><br><br><br>
+                    
                 <div class="col-lg-8 col-md-12 col-sm-12">
+                        <header class="p-top-double p-bottom-double pillar-hero flex flex-align-middle flex-reset-xs">
+                                <h1 class="lg-title mb-2 p-left-none text-center-xs text-shadow">Utiliza la compania de compra/venta mas grande de Argentina</h1>
+                            </header>
                     <div class="portfolio-single">
                         <div class="large-image">
                             <img src="{% static 'assets/img/portfolio/ml.jpg' %}" alt="" class="img-fluid">
