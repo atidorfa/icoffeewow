@@ -29,7 +29,7 @@ SECRET_KEY = config['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['45.56.66.173']
+ALLOWED_HOSTS = ['www.icoffee.com', '45.56.66.173']
 
 
 # Application definition
