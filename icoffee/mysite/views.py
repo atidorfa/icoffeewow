@@ -13,4 +13,8 @@ def mercadolibre(request):
 def facebook(request):
     return render(request, 'facebook.html')
 
+def pagamenos(request):
+        return render(request, 'pagamenos.html')
 
+def wow(request):
+        return render(request, 'wow.html')
