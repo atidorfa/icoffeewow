@@ -28,11 +28,11 @@
 
     <!-- NAVBAR
     ================================================= -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-togglable  fixed-top " id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-togglable  fixed-top" id="mainNav">
         <div class="container">
 
             <!-- Brand -->
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <a class="navbar-brand js-scroll-trigger " href="#page-top">
                 <h2>iCoffee</h2>
             </a>
 
@@ -47,19 +47,15 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <!-- Links -->
                 <ul class="navbar-nav ml-auto">
+
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#page-top">
-                            Home
+                        <a class="nav-link js-scroll-trigger" href="#service">
+                            Sevices
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#feature">
-                            Buy Gold
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">
-                            Characters
+                        <a class="nav-link js-scroll-trigger" href="#credentials">
+                            Credentials
                         </a>
                     </li>
                     <li class="nav-item">
@@ -69,7 +65,7 @@
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link js-scroll-trigger" href="#contact">
-                            Sell Gold
+                            Work with us
                         </a>
                     </li>
                 </ul>
@@ -84,21 +80,20 @@
 
     <!-- HERO
     ================================================== -->
-    <section class="section section-top section-full">
+	<section class="section section-top section-full">
 
         <!-- Cover -->
-        <div class="bg-cover" style="background-image: url({% static 'assets/img/portfolio/illi.jpg' %});"></div>
-
+        <div class="bg-cover" style="background-image: url({% static 'assets/img/banner/mainbanner3.png' %});"></div>
+		<div class="container">
         <!-- Overlay -->
         <div class="bg-overlay">
 			<div class="banner-content">
-				<h1 class="text-white text-center mb-4 display-4 font-weight-bold">
-						<font color="green">iCoffee Classic</font>
-				</h1>
-			</div>
-		</div>
-        <!-- Content -->
 
+
+					</div>
+				</div>
+        <!-- Content -->
+		</div>
         <!-- / .container -->
     </section>
 
@@ -106,14 +101,14 @@
 
     <!-- GOLD
     ================================================== -->
-    <section class="section" id="feature">
+    <section class="section" id="service">
         <div class="container">
             <div class="row justify-content-center mb-4">
                 <div class="col-md-8 col-lg-7 text-center">
 
                     <!-- Heading -->
                     <h2 class="lg-title mb-2">
-                        Buy Gold
+                        Our services
                     </h2>
 
                     <!-- Subheading -->
@@ -122,154 +117,191 @@
                     </p>
                 </div>
         </div>
-        <div class="container">
-        <div class="row justify-content-center">
-        <article>
-        <div class="col-lg-8 col-md-6 col-sm-6 mb-5">
-            <div class="card" style="width:200px">
-            <div class="row justify-content-center">
-                <div class="container">
-                <center>
-                      <br>
-                      <img src="https://www.5mmo.com/upload/201909021351096370.jpg" alt="20 Gold">
-                </center>
-                </div>
-                </div>
-                <div class="card-body">
-                     <center><h4 class="card-title">10 Gold -> $7.99</h4></center>
-                     <p class="card-text">
+		</div>
 
-                     </p>
-					 <center><a href="#pay" class="btn btn-info center nav-link js-scroll-trigger">USD $37.99</a></center>
-                </div>
-            </div>
-        </div>
-        </article>
+<div class="container">
+    <div class="row justify-content-center">
         <article>
-        <div class="col-lg-8 col-md-6 col-sm-6 mb-5">
-            <div class="card" style="width:200px">
-            <div class="row justify-content-center">
-                <div class="container">
-                <center>
-                      <br>
-                      <img src="https://www.5mmo.com/upload/201909021351096370.jpg" alt="50 Gold">
-                </center>
-                </div>
-                </div>
-                <div class="card-body">
-                     <center><h4 class="card-title">50 Gold</h4></center>
-                     <p class="card-text">
-                     </p>
-                     <center><a href="#pay" class="btn btn-info center nav-link js-scroll-trigger">USD $37.99</a></center>
-                </div>
-            </div>
-        </div>
+	        <div class="col-lg-8 col-md-6 col-sm-6 mb-5">
+	            <div class="card" style="width:200px">
+	            <div class="row justify-content-center">
+	                <div class="container">
+						<br>
+						  <div class="container">
+	                      <img src="{% static 'assets/img/wow/goldtoken.png' %}" alt="20gold">
+						  </div>
+
+	                </div>
+	            </div>
+					<div class="card-body">
+						 <!-- <center><h4 class="card-title">100 Gold</h4></center>
+						 <p class="card-text"></p>-->
+						 <center><a href="wow_classic_gold" class="btn btn-info center nav-link js-scroll-trigger">SEE MORE</a></center>
+					</div>
+	            </div>
+			</div>
         </article>
 		<article>
-        <div class="col-lg-8 col-md-6 col-sm-6 mb-5">
-            <div class="card" style="width:200px">
-            <div class="row justify-content-center">
-                <div class="container">
-                <center>
-                      <br>
-                      <img src="https://www.5mmo.com/upload/201909021351096370.jpg" alt="100 Gold">
-                </center>
-                </div>
-                </div>
-                <div class="card-body">
-                     <center><h4 class="card-title">100 Gold</h4></center>
-                     <p class="card-text">
-                     </p>
-                     <center><a href="#pay" class="btn btn-info center nav-link js-scroll-trigger">USD $69.99</a></center>
-                </div>
-            </div>
-        </div>
-        </article>
-		<article id="pay">
-		<div class="col-lg-8 col-md-6 col-sm-6 mb-5">
-			<div class="card" style="width:200px">
-			<div class="row justify-content-center">
-				<div class="container">
-				<center>
-					  <br>
-					  <img src="https://www.5mmo.com/upload/201909021351096370.jpg" alt="1000 Gold">
-				</center>
+			<div class="col-lg-8 col-md-6 col-sm-6 mb-5">
+				<div class="card" style="width:200px">
+				<div class="row justify-content-center">
+					<div class="container">
+						<br>
+						  <div class="container">
+						  <img src="{% static 'assets/img/wow/goldtoken.png' %}" alt="20gold">
+						  </div>
+
+					</div>
 				</div>
-				</div>
-				<div class="card-body">
-					 <center><h4 class="card-title">1000 Gold</h4></center>
-					 <p class="card-text">
-					 </p>
-					 <center><a href="#pay" class="btn btn-info center nav-link js-scroll-trigger">USD $639.99</a></center>
+					<div class="card-body">
+						 <!-- <center><h4 class="card-title">100 Gold</h4></center>
+						 <p class="card-text"></p>-->
+						 <center><a href="/buy-items" class="btn btn-info center nav-link js-scroll-trigger">SEE MORE</a></center>
+					</div>
 				</div>
 			</div>
-		</div>
 		</article>
+		<article>
+			<div class="col-lg-8 col-md-6 col-sm-6 mb-5">
+				<div class="card" style="width:200px">
+				<div class="row justify-content-center">
+					<div class="container">
+						<br>
+						  <div class="container">
+						  <img src="{% static 'assets/img/wow/levelling.png' %}" alt="level">
+						  </div>
 
-		<div class="container">
-		<div class="row justify-content-center">
-			<div class="form-group row" style="width:400px">
-				<select class="form-control" id="select_server">
-				<option value="Faerlina-US" server_name="Faerlina-US" selected="">Faerlina-US</option>
-				<option value="Faerlina-US" server_name="Faerlina-US" selected="">Faerlina-US</option>
-				<option value="Faerlina-US" server_name="Faerlina-US" selected="">Faerlina-US</option>
-				<option value="Faerlina-US" server_name="Faerlina-US" selected="">Faerlina-US</option>
-				<option value="Faerlina-US" server_name="Faerlina-US" selected="">Faerlina-US</option>
-				<option value="Faerlina-US" server_name="Faerlina-US" selected="">Faerlina-US</option>
-			</select>
+					</div>
+				</div>
+					<div class="card-body">
+						 <!-- <center><h4 class="card-title">100 Gold</h4></center>
+						 <p class="card-text"></p>-->
+						 <center><a href="/60-boost" class="btn btn-info center nav-link js-scroll-trigger">SEE MORE</a></center>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article>
+			<div class="col-lg-8 col-md-6 col-sm-6 mb-5">
+				<div class="card" style="width:200px">
+				<div class="row justify-content-center">
+					<div class="container">
+						<br>
+						  <div class="container">
+						  <img src="{% static 'assets/img/wow/goldtoken.png' %}" alt="20gold">
+						  </div>
+
+					</div>
+				</div>
+					<div class="card-body">
+						 <!-- <center><h4 class="card-title">100 Gold</h4></center>
+						 <p class="card-text"></p>-->
+						 <center><a href="/characters" class="btn btn-info center nav-link js-scroll-trigger">SEE MORE</a></center>
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+</div>
+</section>
+
+<!-- SERVICES
+================================================== -->
+<section class="section bg-light" id="credentials">
+	<!-- Content -->
+	<div class="container">
+		<div class="row justify-content-center mb-4">
+			<div class="col-md-8 col-lg-7 text-center">
+
+				<!-- Heading -->
+				<h2 class="lg-title mb-2">
+					Our Credentials
+				</h2>
+
+				<!-- Subheading -->
+				<p class="mb-5">
+					All the best offers on iCoffee are suggested by our automated system.
+				</p>
+
 			</div>
 		</div>
-		<div class="row justify-content-center">
-			<div class="form-group row" style="width:400px">
-				<select class="form-control" id="select_server">
-				<option value="Alliance" server_name="Alliance" selected="">Alliance</option>
-				<option value="Horde" server_name="Horde" selected="">Horde</option>
-				</select>
+		<!-- / .row -->
+
+
+		<div class="row">
+			<div class="col-lg-4 col-sm-6 col-md-6 mb-4 ">
+				<div class="service-block d-flex">
+					<div class="service-icon ">
+						<i class="fa fa-shield-alt"></i>
+					</div>
+					<div class="service-content ">
+						<h4><span>100%</span> Trading protection</h4>
+						<p>Guaranteed trading protection for both buyers and sellers. iCoffee guarantees fair resolutions of any disputes</p>
+					</div>
+				</div>
 			</div>
-		</div>
-		</div>
-		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="width:400px">
-			<input type="hidden" name="cmd" value="_s-xclick">
-			<input type="hidden" name="hosted_button_id" value="KG28J75YZ7YTL">
-			<table>
-			<tr><td><input type="hidden" name="on0" value="Gold" ></td></tr><tr><td>
-			<select name="os0" style="width:400px">
-				<option value="10 gold">10 Gold -> $7,99 USD</option>
-				<option value="20 gold">20 Gold -> $14,99 USD</option>
-				<option value="50 gold">50 gold -> $37,99 USD</option>
-				<option value="100 gold">100 gold -> $69,99 USD</option>
-				<option value="500 gold">500 gold -> $339,99 USD</option>
-				<option value="1000 gold">1000 gold -> $639,99 USD</option>
-			</select> </td></tr>
-			</table>
-			<br>
-			<input type="hidden" name="currency_code" value="USD">
-			<div id="paypal-button-container" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<div class="col-lg-4 col-sm-6 col-md-6 mb-4">
+				<div class="service-block d-flex">
+					<div class="service-icon">
+						<i class="fa fa-clock"></i>
+					</div>
+					<div class="service-content">
+						<h4>Acurate delivery <span>Time</span></h4>
+						<p>Average delivery times of previous orders are always visible, helping buyers know when their items will arrive.</p>
+					</div>
+				</div>
 			</div>
-			<!-- Include the PayPal JavaScript SDK -->
-			<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+			<div class="col-lg-4 col-sm-6 col-md-6 mb-4">
+				<div class="service-block d-flex">
+					<div class="service-icon">
+						<i class="fa fa-headset"></i>
+					</div>
+					<div class="service-content">
+						<h4>24 Hours <span>Dedicated Support </span></h4>
+						<p>iCoffee support works around the clock. Contact us at any time!</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6 col-md-6 mb-4">
+				<div class="service-block d-flex">
+					<div class="service-icon">
+						<i class="fa fa-certificate"></i>
+					</div>
+					<div class="service-content">
+						<h4>CERTIFICATE <span>pay options</span></h4>
+						<p></p>
+					</div>
+				</div>
+			</div>
 
-			<script>
-				// Render the PayPal button into #paypal-button-container
-				paypal.Buttons({
+			<div class="col-lg-4 col-sm-6 col-md-6 mb-4">
+				<div class="service-block d-flex">
+					<div class="service-icon">
+						<i class="fab fa-paypal"></i>
+					</div>
+					<div class="service-content">
+						<h4><span>With</span> Paypal</h4>
+						<p></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6 col-md-6 mb-4">
+				<div class="service-block d-flex">
+					<div class="service-icon">
+						<i class="fab fa-cc-visa"></i>
+						<i class="fab fa-cc-mastercard"></i>
+					</div>
+					<div class="service-content">
+						<h4>VISA<span> - </span>mastercard</h4>
+						<p></p>
+					</div>
+				</div>
+			</div>
 
-					style: {
-						color:  'blue',
-						shape:  'pill',
-						label:  'pay',
-						height: 40
-					}
 
-				}).render('#paypal-button-container');
-			</script>
-		</form>
-		<div id="paypal-button-container"></div>
-
-
-        </div>
-        </div>
-
-    </section>
+		</div>
+	</div>
+</section>
 
     <!-- CHARACTERS
     ================================================== -->
