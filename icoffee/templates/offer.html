@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<style>
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+body {
+	background: #fafafa;
+}
+body {
+	height: 100%;
+	font-family: "Maison Neue",sans-serif;
+	font-weight: 400;
+	color: #4a4a5d;
+	background: #fafafa;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+.buorg {
+	position: absolute;
+	position: fixed;
+	z-index: 111111;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	border-bottom: 1px solid #A29330;
+	text-align: center;
+	color: #000;
+	background-color: #fff8ea;
+	font: 18px Calibri, Helvetica, sans-serif;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+	animation: buorgfly 1s ease-out 0s;
+}
+.buorg {
+	text-align: left;
+	width: 300px;
+	top: 50px;
+	right: 50px;
+	left: auto;
+	border: 1px solid #A29330;
+}
+body .buorg {
+	background-color: #ffc001;
+}
+.preload-logo {
+	height: 60px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	background: #fff;
+	border-bottom: 1px solid #edf1f4;
+	box-shadow: 0px 3px 4px rgba(107,107,126,0.15);
+}
+.preload-logo {
+	display: none;
+}
+iframe#_hjRemoteVarsFrame {
+	display: none !important;
+	width: 1px !important;
+	height: 1px !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+}
+.header {
+	margin-bottom: 50px;
+}
+[_ngcontent-amt-c0].header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 9998;
+}
+[_ngcontent-amt-c0].page-container {
+	z-index: 1;
+	display: block;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	background-color: #fafafa;
+	color: #4a4a5d;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+[_ngcontent-amt-c5].toast-top-right {
+	top: 20px;
+	right: 10px;
+	max-width: 320px;
+}
+[_ngcontent-amt-c5]#toast-container {
+	width: 100%;
+	position: fixed;
+	margin-top: 70px;
+	z-index: 9999;
+	pointer-events: none;
+	text-align: center;
+}
+[_ngcontent-amt-c4].app-spinner {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	background: rgba(0,0,0,.6);
+	-webkit-transition: .3s;
+	transition: all .3s ease;
+	z-index: 9998;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise, [_ngcontent-amt-c4].la-ball-spin-clockwise > div[_ngcontent-amt-c4] {
+	position: relative;
+	box-sizing: border-box;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise {
+	display: block;
+	font-size: 0px;
+	color: #fff;
+	width: 32px;
+	height: 32px;
+}
+[_ngcontent-amt-c4].app-circle {
+	color: #ffb100;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise.la-2x {
+	width: 64px;
+	height: 64px;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise > div[_ngcontent-amt-c4] {
+	display: inline-block;
+	float: none;
+	background-color: currentColor;
+	border: 0 solid currentColor;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 8px;
+	height: 8px;
+	margin-top: -4px;
+	margin-left: -4px;
+	border-radius: 100%;
+	-webkit-animation: 1s ease-in-out infinite ball-spin-clockwise;
+	animation: 1s ease-in-out infinite ball-spin-clockwise;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise > div[_ngcontent-amt-c4]:nth-child(1) {
+	top: 5%;
+	left: 50%;
+	-webkit-animation-delay: -875ms;
+	animation-delay: -875ms;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise > div[_ngcontent-amt-c4]:nth-child(2) {
+	top: 18.18%;
+	left: 81.81%;
+	-webkit-animation-delay: -.75s;
+	animation-delay: -0.75s;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise > div[_ngcontent-amt-c4]:nth-child(3) {
+	top: 50%;
+	left: 95%;
+	-webkit-animation-delay: -625ms;
+	animation-delay: -625ms;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise > div[_ngcontent-amt-c4]:nth-child(4) {
+	top: 81.81%;
+	left: 81.81%;
+	-webkit-animation-delay: -.5s;
+	animation-delay: -0.5s;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise > div[_ngcontent-amt-c4]:nth-child(5) {
+	top: 94.99%;
+	left: 50%;
+	-webkit-animation-delay: -375ms;
+	animation-delay: -375ms;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise > div[_ngcontent-amt-c4]:nth-child(6) {
+	top: 81.81%;
+	left: 18.18%;
+	-webkit-animation-delay: -.25s;
+	animation-delay: -0.25s;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise > div[_ngcontent-amt-c4]:nth-child(7) {
+	top: 49.99%;
+	left: 5%;
+	-webkit-animation-delay: -125ms;
+	animation-delay: -125ms;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise > div[_ngcontent-amt-c4]:nth-child(8) {
+	top: 18.17%;
+	left: 18.18%;
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+}
+[_ngcontent-amt-c4].la-ball-spin-clockwise.la-2x > div[_ngcontent-amt-c4] {
+	width: 16px;
+	height: 16px;
+	margin-top: -8px;
+	margin-left: -8px;
+}
+[_ngcontent-amt-c0].main-content {
+	position: relative;
+	margin-top: 60px;
+	margin-left: 70px;
+	z-index: 1;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	height: 100%;
+	min-height: calc(100vh - 60px);
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+[_ngcontent-amt-c0].main-content.sidenav-not-visible {
+	margin-left: 0px;
+}
+[_ngcontent-amt-c0].router-outlet-wrapper {
+	-webkit-box-flex: 1;
+	flex: 1 0 auto;
+}
+footer[_ngcontent-amt-c3] {
+	width: 100%;
+	padding: 20px;
+	background: #2d2e3f;
+	color: #b4b4bc;
+}
+section {
+	padding: 50px 0;
+}
+.base-container {
+	width: 1140px;
+	max-width: 100%;
+	padding: 0 15px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+[_ngcontent-amt-c3].footer-menu {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+}
+hr.separator {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #e9e9ee !important;
+}
+hr[_ngcontent-amt-c3].separator {
+	border-top: 1px solid rgba(107, 107, 126, .5) !important;
+}
+[_ngcontent-amt-c3].company-info {
+	padding-top: 20px;
+	text-align: center;
+	color: #b4b4bc;
+}
+[_ngcontent-amt-c3].copyright {
+	padding-top: 8px;
+	text-align: center;
+	color: #b4b4bc;
+}
+p {
+	line-height: 21px;
+	font-size: 14px;
+}
+a {
+	font-size: 14px;
+	color: #2b8ced;
+	text-decoration: none;
+	-webkit-transition: .2s;
+	transition: all .2s ease;
+}
+[_ngcontent-amt-c3].footer-accordion-container {
+	margin-top: 10px;
+	width: 64%;
+}
+[_ngcontent-amt-c3].footer-icons-container {
+	margin-top: 10px;
+	width: 20%;
+}
+[_ngcontent-amt-c3].footer-icons-section {
+	margin-bottom: 10px;
+}
+h5 {
+	line-height: normal;
+	font-size: 14px;
+}
+h5[_ngcontent-amt-c3] {
+	margin-bottom: 15px;
+	color: #e9e9ee;
+}
+.row-sm {
+	margin-left: -10px;
+	margin-right: -10px;
+}
+[_ngcontent-amt-c3].payment-method-image {
+	display: inline-block;
+	padding: 0 5px;
+	margin-bottom: 5px;
+}
+[_ngcontent-amt-c3]:first-child.payment-method-image {
+	padding-left: 10px;
+}
+img[_ngcontent-amt-c18] {
+	max-width: 100%;
+}
+[_ngcontent-amt-c18].app-image {
+	opacity: 0;
+	-webkit-transition: .3s;
+	transition: all .3s ease;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+[_ngcontent-amt-c18].app-image.loaded {
+	opacity: 1;
+}
+.col-sm {
+	padding: 0 10px;
+}
+[_ngcontent-amt-c3].social-icons a[_ngcontent-amt-c3] {
+	margin-bottom: 10px;
+	display: inline-block;
+}
+.row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+[_ngcontent-amt-c14].footer-accordion {
+	padding-bottom: 20px;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+}
+.col {
+	padding: 0 15px;
+}
+h5[_ngcontent-amt-c14] {
+	margin-bottom: 25px;
+	color: #e9e9ee;
+}
+[_ngcontent-amt-c14].accordion-items {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+}
+[_ngcontent-amt-c14].accordion-items a[_ngcontent-amt-c14] {
+	margin-bottom: 5px;
+	font-size: 14px;
+	line-height: 21px;
+	color: #b4b4bc;
+	-webkit-transition: .2s;
+	transition: all .2s ease;
+}
+.material-icons {
+	font-family: "Material Icons";
+	font-weight: 400;
+	font-style: normal;
+	font-size: 24px;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-feature-settings: "liga";
+	font-feature-settings: "liga" 1;
+}
+[_ngcontent-amt-c14].arrow-down, [_ngcontent-amt-c14].arrow-up {
+	display: none;
+	-webkit-transition: .2s;
+	transition: all .2s ease;
+}
+[_nghost-amt-c52] {
+	display: block;
+	padding-bottom: 150px;
+}
+[_ngcontent-amt-c52].game-offer-page {
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 100%;
+	width: 100%;
+	min-height: 490px;
+}
+[_ngcontent-amt-c52].game-offer-section {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	-webkit-box-align: start;
+	align-items: flex-start;
+}
+[_ngcontent-amt-c52].other-sellers-section {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+	margin-top: 60px;
+}
+h4 {
+	line-height: normal;
+	font-size: 24px;
+	color: #4a4a5d;
+}
+[_ngcontent-amt-c52].other-sellers-section eld-other-sellers-for-offer[_ngcontent-amt-c52] {
+	margin-top: 30px;
+	width: 100%;
+}
+[_ngcontent-amt-c59].offer-seller-card {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	cursor: pointer;
+	border: 1px solid #e9e9ee;
+	margin-bottom: 10px;
+	padding: 15px 30px;
+	background-color: #fff;
+}
+[_ngcontent-amt-c59]:first-child.offer-seller-card {
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+[_ngcontent-amt-c62].tooltip {
+	position: absolute;
+	z-index: 9997;
+	display: block;
+	opacity: 0;
+}
+[_ngcontent-amt-c62].tooltip.top {
+	margin-top: -3px;
+	padding: 5px 0;
+}
+[_ngcontent-amt-c62].tooltip-arrow {
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border-color: transparent;
+	border-style: solid;
+}
+[_ngcontent-amt-c62].tooltip.top [_ngcontent-amt-c62].tooltip-arrow {
+	bottom: 0px;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px 5px 0;
+	border-top-color: #2d2e3f;
+}
+.hyphenate {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+[_ngcontent-amt-c62].tooltip-inner {
+	max-width: 200px;
+	padding: 10px 10px 7px;
+	font-size: 12px !important;
+	line-height: 14px !important;
+	color: #fff;
+	background-color: #2d2e3f;
+	border-radius: 3px;
+}
+eld-shared-user-short-info[_ngcontent-amt-c59] {
+	flex-basis: 27%;
+}
+[_ngcontent-amt-c59].detail {
+	display: -webkit-box;
+	display: flex;
+	flex-basis: 16%;
+	margin-top: 5px;
+}
+[_ngcontent-amt-c59].pricing {
+	flex-basis: 25%;
+}
+[_ngcontent-amt-c59].pricing {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: end;
+	align-items: flex-end;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+}
+[_ngcontent-amt-c59].price-details {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+[_ngcontent-amt-c59].unit-price {
+	color: #36af47;
+	margin-bottom: 3px;
+}
+[_ngcontent-amt-c59].price-details [_ngcontent-amt-c59].unit-system {
+	font-size: 14px;
+	color: #6b6b7e;
+	text-transform: capitalize;
+}
+[_ngcontent-amt-c59].detail > div[_ngcontent-amt-c59] {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+}
+[_ngcontent-amt-c59].detail [_ngcontent-amt-c59].label {
+	font-size: 12px;
+	color: #b4b4bc;
+	margin-bottom: 7px;
+}
+[_ngcontent-amt-c59].detail [_ngcontent-amt-c59].value {
+	font-size: 14px;
+	color: #4a4a5d;
+}
+.small-chip {
+	font-size: 12px;
+	line-height: 12px;
+	color: #4a4a5d;
+	background-color: rgba(180,180,188,.2);
+	padding: 5px 5px 3px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+	display: -webkit-inline-box;
+	display: inline-flex;
+	-webkit-box-align: center;
+	align-items: center;
+	cursor: default;
+	-webkit-transition: .2s;
+	transition: all .2s ease;
+}
+[_ngcontent-amt-c59].delivery-avg {
+	color: #36af47;
+}
+[_ngcontent-amt-c59].is-empty {
+	color: #4a4a5d;
+}
+[_ngcontent-amt-c60].offer-seller-details {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: start;
+	justify-content: flex-start;
+	height: 50px;
+}
+[_ngcontent-amt-c60].offer-seller-details > eld-shared-profile-picture[_ngcontent-amt-c60] {
+	margin-right: 20px;
+}
+[_ngcontent-amt-c60].offer-seller-info {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	justify-content: center;
+	color: #2d2e3f;
+	font-weight: 400;
+	font-family: "Maison Neue",sans-serif;
+	font-size: 14px;
+}
+[_ngcontent-amt-c60].offer-seller-username {
+	display: -webkit-box;
+	display: flex;
+	margin-bottom: 5px;
+	font-size: 14px;
+	line-height: 18px;
+}
+[_ngcontent-amt-c60].offer-seller-ratings {
+	display: -webkit-box;
+	display: flex;
+}
+[_ngcontent-amt-c60].offer-seller-username > a[_ngcontent-amt-c60] {
+	text-decoration: none;
+	font-weight: 700;
+	color: #2b8ced;
+}
+[_ngcontent-amt-c60].offer-seller-info a[_ngcontent-amt-c60] {
+	text-decoration: none;
+}
+.small-chip i {
+	font-size: 18px;
+	margin-right: 5px;
+}
+.completed-orders i, .completed-orders-chip i {
+	color: #2b8ced;
+	font-weight: 700;
+}
+[_ngcontent-amt-c60].completed-orders-chip i[_ngcontent-amt-c60] {
+	color: #2b8ced;
+	font-weight: 700;
+}
+.score-chip i {
+	color: #ffc001;
+}
+[_ngcontent-amt-c60].offer-seller-feedback-score i[_ngcontent-amt-c60] {
+	color: #ffc001;
+}
+[_ngcontent-amt-c60].offer-seller-username > i[_ngcontent-amt-c60] {
+	color: #36af47;
+	font-size: 13px;
+	margin-left: 5px;
+	cursor: default;
+}
+eld-shared-svg-profile[_ngcontent-amt-c63], img[_ngcontent-amt-c63] {
+	border-radius: 3px;
+}
+[_ngcontent-amt-c69].discount-tooltip {
+	width: 180px;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+}
+[_ngcontent-amt-c69].tooltips-header {
+	color: #ffc001;
+}
+[_ngcontent-amt-c69].discount-tooltip > div[_ngcontent-amt-c69] {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+[_ngcontent-amt-c69].discount-tooltip [_ngcontent-amt-c69].tooltips-header {
+	margin-bottom: 0px;
+}
+[_ngcontent-amt-c69].discount-tooltip [_ngcontent-amt-c69].tooltip-separator {
+	margin: 8px 0 10px;
+	border-top: 1px solid #6b6b7e !important;
+}
+[_ngcontent-amt-c69].discount-tooltip > div[_ngcontent-amt-c69]:last-child {
+	margin-bottom: 0px;
+}
+[_ngcontent-amt-c69].discount-tooltip p[_ngcontent-amt-c69] {
+	font-size: 12px;
+	line-height: 14px;
+}
+[_ngcontent-amt-c61].discount [_ngcontent-amt-c61].label {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	font-size: 14px;
+	color: #4a4a5d;
+}
+[_ngcontent-amt-c61].discount [_ngcontent-amt-c61].label span[_ngcontent-amt-c61] {
+	margin-left: 5px;
+}
+svg[_ngcontent-amt-c64] {
+	border-radius: 3px;
+}
+[_ngcontent-amt-c59].is-late {
+	color: #fc6161;
+}
+[_nghost-amt-c54] {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: start;
+	justify-content: flex-start;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	background-color: #fff;
+	border: 1px solid #e9e9ee;
+	border-radius: 3px;
+	padding: 40px;
+}
+[_ngcontent-amt-c52].game-offer-section > eld-game-offer-item-details-card[_ngcontent-amt-c52] {
+	width: 730px;
+}
+[_ngcontent-amt-c52].game-offer-section > [_ngcontent-amt-c52].buy-now-card {
+	width: 350px;
+	align-self: flex-start;
+}
+[_nghost-amt-c55] {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-pack: start;
+	justify-content: flex-start;
+	background-color: #fff;
+	border: 1px solid #e9e9ee;
+	border-radius: 3px;
+}
+[_ngcontent-amt-c56].trade-shield-block {
+	display: -webkit-box;
+	display: flex;
+	border-radius: 3px;
+	padding: 23px 30px 15px;
+	margin-top: 20px;
+	background-color: #fff;
+	border: 1px solid #e9e9ee;
+}
+[_ngcontent-amt-c56].trade-shield-text-top {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: end;
+	align-items: flex-end;
+	margin-bottom: 6px;
+}
+p[_ngcontent-amt-c56] {
+	color: #4a4a5d;
+}
+h3 {
+	margin-bottom: 10px;
+	line-height: normal;
+	font-size: 36px;
+	color: #4a4a5d;
+}
+h3[_ngcontent-amt-c56] {
+	margin-bottom: 0px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #4a4a5d;
+}
+a[_ngcontent-amt-c56] {
+	font-size: 14px;
+	line-height: 21px;
+}
+[_ngcontent-amt-c55].buy-unit-price-details {
+	height: 70px;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+[_ngcontent-amt-c55].buy-details-wrapper {
+	padding: 20px 30px;
+}
+[_ngcontent-amt-c55].buy-delivery-time {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+	border: 1px solid #e9e9ee;
+	border-radius: 3px;
+	padding: 14px 10px;
+	margin-bottom: 25px;
+}
+[_ngcontent-amt-c55].buy-details {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	font-size: 14px;
+	margin-bottom: 14px;
+}
+[_ngcontent-amt-c55].quantity-details {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	font-size: 14px;
+	padding-bottom: 19px;
+	flex-wrap: wrap;
+}
+[_ngcontent-amt-c55].buy-price {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+[_ngcontent-amt-c55].validation-errors {
+	margin-top: 20px;
+}
+[_ngcontent-amt-c55].buy-info {
+	margin-top: 20px;
+	text-align: center;
+	color: #9898a3;
+	font-weight: 400;
+	font-family: "Maison Neue",sans-serif;
+	font-size: 14px;
+}
+button[_ngcontent-amt-c9]::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5px;
+	height: 5px;
+	background: rgba(255,255,255,.5);
+	opacity: 0;
+	border-radius: 100%;
+	-webkit-transform: scale(1, 1) translate(-50%);
+	transform: scale(1) translate(-50%);
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+[_ngcontent-amt-c9].button {
+	position: relative;
+	width: 100%;
+	min-width: 95px;
+	min-height: 35px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 6px 20px;
+	border: 0;
+	border-radius: 3px;
+	box-shadow: 0px 2px 2px rgba(76,57,8,0.15);
+	white-space: normal !important;
+	cursor: pointer;
+	background-color: #2b8ced;
+	display: inline-block;
+	overflow: hidden;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-transition: background-color .2s ease-out, box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+	transition: background-color .2s ease-out, box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+}
+[_ngcontent-amt-c9].button-apple-animated {
+	color: #fff;
+	background-color: #36af47;
+}
+/* @media all and (min-width:1024px) */
+[_ngcontent-amt-c9].button-apple-animated::after, [_ngcontent-amt-c9].button-apple-animated::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 200%;
+	background: rgba(255,255,255,.325);
+	-webkit-transform: skew(-15deg) translateX(-25px);
+	transform: skew(-15deg) translateX(-25px);
+	-webkit-filter: blur(1px);
+	filter: blur(1px);
+	top: -50%;
+	left: 0px;
+	-webkit-animation-delay: 7.5s;
+	animation-delay: 7.5s;
+	-webkit-animation: 7.5s cubic-bezier(.93, .04, .47, .47) infinite sheenA;
+	animation: 7.5s cubic-bezier(.93,.04,.47,.47) infinite sheenA;
+}
+/* @media all and (min-width:1024px) */
+[_ngcontent-amt-c9].button-apple-animated::before {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+	width: 5px;
+	left: 8px;
+	background: rgba(255,255,255,.275);
+	-webkit-animation: 7.5s cubic-bezier(.93, .04, .47, .47) infinite sheenB;
+	animation: 7.5s cubic-bezier(.93,.04,.47,.47) infinite sheenB;
+}
+[_ngcontent-amt-c55].buy-button > eld-shared-button[_ngcontent-amt-c55] button {
+	height: 50px;
+}
+i[_ngcontent-amt-c9], span[_ngcontent-amt-c9] {
+	display: inline-block;
+}
+[_ngcontent-amt-c9].button-text {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+}
+i[_ngcontent-amt-c9] {
+	margin-right: 10px;
+	font-size: 14px;
+}
+[_ngcontent-amt-c9].button-text [_ngcontent-amt-c9].material-icons {
+	font-size: 18px;
+}
+[_ngcontent-amt-c55].buy-price [_ngcontent-amt-c55].label {
+	color: #4a4a5d;
+}
+[_ngcontent-amt-c55].quantity-details [_ngcontent-amt-c55].label {
+	color: #9898a3;
+}
+[_nghost-amt-c67] {
+	display: inline-block;
+}
+[_ngcontent-amt-c67].number-input-container {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	border-radius: 3px;
+	margin-top: -1px;
+	border: 1px solid #b4b4bc;
+}
+[_ngcontent-amt-c67].number-input-container.with-controls, [_ngcontent-amt-c67].number-input-container.with-controls:focus, [_ngcontent-amt-c67].number-input-container.with-controls:hover {
+	border: 1px solid #e9e9ee;
+}
+[_ngcontent-amt-c67].control {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: #e9e9ee;
+	font-size: 24px;
+	color: #040319;
+	height: 33px;
+	width: 34px;
+	-webkit-transition: .2s;
+	transition: all .2s ease;
+}
+[_ngcontent-amt-c67].control.subtract-control {
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+[_ngcontent-amt-c67].input-wrapper {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color: #2d2e3f;
+	font-weight: 400;
+	font-family: "Maison Neue",sans-serif;
+	font-size: 14px;
+}
+[_ngcontent-amt-c67].input-wrapper {
+	padding: 1px;
+}
+[_ngcontent-amt-c67].control.add-control {
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+[_ngcontent-amt-c67].control > span[_ngcontent-amt-c67] {
+	color: #040319;
+	height: 20px;
+}
+[_ngcontent-amt-c67].input {
+	border: none;
+	height: 31px;
+	color: #2d2e3f;
+	font-weight: 400;
+	font-family: "Maison Neue",sans-serif;
+	font-size: 14px;
+	padding: 3px 0 0 15px;
+	width: 110px;
+}
+[_ngcontent-amt-c55].buy-details [_ngcontent-amt-c55].label {
+	margin-right: 7px;
+	color: #9898a3;
+}
+[_ngcontent-amt-c55].buy-details [_ngcontent-amt-c55].value {
+	color: #4a4a5d;
+}
+h6[_ngcontent-amt-c55] {
+	display: -webkit-box;
+	display: flex;
+	margin-bottom: 5px;
+	font-size: 14px;
+	line-height: 25px;
+}
+[_ngcontent-amt-c55].buy-delivery-time [_ngcontent-amt-c55].buy-delivery-time-entries {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+[_ngcontent-amt-c55].buy-delivery-time [_ngcontent-amt-c55].buy-delivery-time-entry {
+	margin-bottom: 5px;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+}
+[_ngcontent-amt-c55].buy-delivery-time [_ngcontent-amt-c55].label {
+	margin-bottom: 5px;
+	font-size: 14px;
+	line-height: 21px;
+	color: #9898a3;
+}
+[_ngcontent-amt-c55].buy-delivery-time [_ngcontent-amt-c55].small-chip {
+	min-width: 115px;
+	font-size: 14px;
+	padding: 9px 10px 5px;
+	text-align: center;
+	margin-right: 0px;
+}
+[_ngcontent-amt-c55].avg-delivery-time {
+	color: #36af47;
+}
+[_ngcontent-amt-c55].buy-delivery-time [_ngcontent-amt-c55].small-chip strong[_ngcontent-amt-c55] {
+	width: 100%;
+}
+h6[_ngcontent-amt-c55] i[_ngcontent-amt-c55] {
+	font-size: 21px;
+	margin-right: 8px;
+}
+[_ngcontent-amt-c55].buy-unit-price {
+	display: -webkit-inline-box;
+	display: inline-flex;
+	-webkit-box-align: end;
+	align-items: flex-end;
+	padding: 8px 8px 5px;
+	margin: 0 30px;
+	color: #4a4a5d;
+	background-color: #fff;
+	border-radius: 3px;
+}
+[_ngcontent-amt-c55].buy-unit-system {
+	padding-bottom: 3px;
+	font-size: 12px;
+	margin-left: 5px;
+	color: #4a4a5d;
+	text-transform: capitalize;
+}
+[_ngcontent-amt-c54].first-row {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+}
+[_ngcontent-amt-c54].offer-details-description {
+	position: relative;
+	margin-top: 40px;
+}
+[_ngcontent-amt-c54].offer-details-description h5[_ngcontent-amt-c54] {
+	margin-bottom: 15px;
+}
+[_ngcontent-amt-c54].offer-details-description p[_ngcontent-amt-c54] {
+	white-space: pre-wrap;
+	color: #2d2e3f;
+	font-weight: 400;
+	font-family: "Maison Neue",sans-serif;
+	font-size: 14px;
+}
+[_ngcontent-amt-c54].offer-details-description [_ngcontent-amt-c54].read-more {
+	display: none;
+}
+[_ngcontent-amt-c54].read-less span[_ngcontent-amt-c54], [_ngcontent-amt-c54].read-more span[_ngcontent-amt-c54] {
+	font-size: 14px;
+	color: #2b8ced;
+	cursor: pointer;
+}
+[_ngcontent-amt-c54].offer-details {
+	width: 100%;
+	max-width: 348px;
+}
+[_ngcontent-amt-c54].offer-details-head {
+	padding-bottom: 10px;
+}
+[_ngcontent-amt-c54].offer-seller {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	margin-top: 0px;
+	padding-bottom: 20px;
+}
+[_ngcontent-amt-c54].offer-seller-head {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+}
+[_ngcontent-amt-c54].offer-seller-head span[_ngcontent-amt-c54] {
+	cursor: pointer;
+	font-size: 14px;
+	color: #2b8ced;
+}
+h4[_ngcontent-amt-c54] {
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+[_ngcontent-amt-c50].offer-label {
+	margin-bottom: 5px;
+}
+[_ngcontent-amt-c50].offer-label p[_ngcontent-amt-c50] {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 16px;
+	color: #2d2e3f;
+	font-weight: 400;
+	font-family: "Maison Neue",sans-serif;
+	font-size: 14px;
+}
+[_ngcontent-amt-c51].trade-env-item {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: start;
+	align-items: flex-start;
+	font-size: 14px;
+	line-height: 16px;
+	color: #4a4a5d;
+}
+img[_ngcontent-amt-c51], svg[_ngcontent-amt-c51] {
+	margin-right: 5px;
+}
+[_ngcontent-amt-c54].image-container {
+	position: relative;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+	min-width: 255px;
+	height: 255px;
+	margin-right: 45px;
+	background-color: #080808;
+	border-radius: 3px;
+}
+[_nghost-amt-c18].rounded-edges, .rounded-edges [_nghost-amt-c18] {
+	border-radius: 3px;
+}
+[_ngcontent-amt-c54].image-container > eld-shared-image[_ngcontent-amt-c54] {
+	max-width: 255px;
+	max-height: 255px;
+}
+[_ngcontent-amt-c54].image-container > eld-shared-image[_ngcontent-amt-c54] img {
+	border-radius: 3px;
+}
+[_nghost-amt-c18].rounded-edges [_ngcontent-amt-c18].app-image, .rounded-edges [_nghost-amt-c18] [_ngcontent-amt-c18].app-image {
+	border-radius: 3px;
+}
+[_ngcontent-amt-c53].breadcrumbs {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 25px 0;
+}
+span[_ngcontent-amt-c53] {
+	padding: 0 7px;
+	font-weight: 400;
+	color: #6b6b7e;
+}
+a[_ngcontent-amt-c53] {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #6b6b7e;
+	text-decoration: none;
+	-webkit-transition: .2s;
+	transition: all .2s ease;
+}
+[_ngcontent-amt-c1].app-header {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	z-index: 9997;
+	background: #fff;
+}
+[_ngcontent-amt-c1].app-header nav[_ngcontent-amt-c1] {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	height: 60px;
+	box-shadow: 0px 3px 4px rgba(107,107,126,0.15);
+}
+[_ngcontent-amt-c1].left-nav-side {
+	display: -webkit-box;
+	display: flex;
+}
+[_ngcontent-amt-c1].navbar-content {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+}
+[_ngcontent-amt-c1].button-wrapper {
+	margin-right: 20px;
+}
+[_ngcontent-amt-c1].navbar-content eld-navbar-links[_ngcontent-amt-c1] {
+	margin-right: 15px;
+}
+[_ngcontent-amt-c10].navbar-links {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: end;
+	justify-content: flex-end;
+	-webkit-box-align: center;
+	align-items: center;
+}
+[_ngcontent-amt-c10].navbar-links [_ngcontent-amt-c10].navbar-link {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	color: #4a4a5d;
+	padding: 10px 20px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-weight: 700;
+}
+[_ngcontent-amt-c10].navbar-links [_ngcontent-amt-c10].navbar-link i[_ngcontent-amt-c10] {
+	font-size: 18px;
+	margin-right: 5px;
+	margin-bottom: 2px;
+}
+[_ngcontent-amt-c9].button-gold {
+	color: #fff;
+	background-color: #ffc001;
+}
+[_nghost-amt-c8] {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+[_ngcontent-amt-c8].categories-menu {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	margin-left: 10px;
+}
+[_ngcontent-amt-c8].dropdown-container {
+	position: absolute;
+	max-width: 1440px;
+	top: 60px;
+	background: 0 0;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0px;
+	right: 0px;
+	z-index: -1;
+}
+/* @media all and (min-width:1023px) */
+eld-categories-menu-dropdown-button[_ngcontent-amt-c8] {
+	display: none;
+}
+[_ngcontent-amt-c8].dropdown-container eld-categories-menu-dropdown-button[_ngcontent-amt-c8] {
+	display: none;
+}
+eld-categories-menu-dropdown[_ngcontent-amt-c8] {
+	display: none;
+}
+[_ngcontent-amt-c23].category-menu-dropdown {
+	width: 100%;
+	max-width: 1440px;
+	max-height: 285px;
+	margin: 0 auto;
+	left: 0px;
+	right: 0px;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	flex-wrap: wrap;
+	background: #fff;
+	padding: 30px 20px 33px;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0px 4px 4px rgba(46,34,3,0.2);
+}
+[_ngcontent-amt-c23].category-menu-dropdown a[_ngcontent-amt-c23] {
+	margin-right: 20px;
+	margin-bottom: 5px;
+	padding: 5px 8px;
+	font-size: 14px;
+	line-height: 21px;
+	color: #4a4a5d;
+}
+[_ngcontent-amt-c23].category-menu-dropdown-item > a[_ngcontent-amt-c23] {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+[_ngcontent-amt-c23].category-menu-dropdown-item eld-shared-image[_ngcontent-amt-c23] {
+	height: 28px;
+}
+[_ngcontent-amt-c23].category-menu-dropdown-item > a[_ngcontent-amt-c23] span[_ngcontent-amt-c23] {
+	margin-left: 10px;
+}
+[_ngcontent-amt-c22].dropdown-button {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	padding: 19px 21px 16px;
+	background: #fafafa;
+	border-bottom: 1px solid #e9e9ee;
+	cursor: pointer;
+}
+[_ngcontent-amt-c22].dropdown-button span[_ngcontent-amt-c22] {
+	font-size: 14px;
+	font-weight: 700;
+}
+[_ngcontent-amt-c8].category-item {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	padding: 10px 5px 9px 10px;
+	margin: 5px;
+	cursor: pointer;
+	-webkit-transition: .2s;
+	transition: all .2s ease;
+	font-size: 14px;
+	line-height: 21px;
+	color: #4a4a5d;
+}
+[_ngcontent-amt-c8].category-item span[_ngcontent-amt-c8] {
+	font-size: 14px;
+	font-weight: 700;
+}
+[_ngcontent-amt-c8].category-item i[_ngcontent-amt-c8] {
+	pointer-events: none;
+}
+[_ngcontent-amt-c7].brand-logo {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	color: color("secondary", "900");
+	text-decoration: none;
+}
+[_ngcontent-amt-c7].brand-icon {
+	display: -webkit-box;
+	display: flex;
+	padding: 11px 15px 9px 20px;
+}
+.buorg-pad {
+	padding: 9px;
+	line-height: 1.7em;
+}
+body .buorg .buorg-pad {
+	padding: 30px;
+}
+.buorg-icon {
+	width: 22px;
+	height: 16px;
+	vertical-align: middle;
+	position: relative;
+	top: -0.05em;
+	display: inline-block;
+	background: no-repeat 0px center url(https://browser-update.org/static/img/small/i.png);
+}
+.buorg-icon {
+	display: none;
+}
+.buorg-buttons {
+	display: block;
+	text-align: center;
+}
+.buorg-buttons, .buorg-mainmsg, .buorg-moremsg {
+	display: block;
+}
+body .buorg .buorg-buttons {
+	margin-top: 20px;
+}
+.buorg-buttons a {
+	margin: 4px 2px;
+}
+#buorgig, #buorgul, #buorgpermanent {
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+	padding: 1px 10px;
+	border-radius: 4px;
+	font-weight: normal;
+	background: #5ab400;
+	white-space: nowrap;
+	margin: 0 2px;
+	display: inline-block;
+}
+#buorgig {
+	background-color: #edbc68;
+}
+body .buorg #buorgig {
+	background-color: #fc6161;
+}
+</style>
+
+</head>
+<body>
+
+	<style> .buorg { text-align: left; width:300px; top:50px; right:50px; left:auto; border:1px solid #A29330; } .buorg-buttons, .buorg-mainmsg, .buorg-moremsg { display: block; } .buorg-buttons a {margin: 4px 2px;} .buorg-icon {display: none;}</style></div>
+  <!-- Preload content for First Contentful/Meaningful Paint -->
+
+
+  <eld-root class="ng-tns-c0-0" _nghost-amt-c0="" ng-version="8.1.3">
+		<eld-navbar class="header ng-tns-c1-1" _ngcontent-amt-c0="" _nghost-amt-c1="">
+			<header class="ng-tns-c1-1" _ngcontent-amt-c1="">
+				<div class="app-header ng-trigger ng-trigger-fadeIn" style="animation-play-state: running;" _ngcontent-amt-c1="">
+					<eld-refresh-page-message class="ng-tns-c1-1 ng-tns-c6-4" _ngcontent-amt-c1="" _nghost-amt-c6=""><!----></eld-refresh-page-message>
+
+					<nav class="ng-tns-c1-1" _ngcontent-amt-c1="">
+						<div class="left-nav-side" _ngcontent-amt-c1="">
+							<eld-site-logo class="ng-tns-c1-1" _ngcontent-amt-c1="" _nghost-amt-c7="">
+								<a class="brand-logo" href="/" _ngcontent-amt-c7="">
+									<div class="brand-icon" _ngcontent-amt-c7=""><!---->
+										<eld-shared-svg-logo-with-text class="ng-star-inserted" _ngcontent-amt-c7="" _nghost-amt-c20="">
+									</div>
+								</a>
+							</eld-site-logo>
+							<eld-categories-menu class="ng-tns-c1-1 ng-tns-c8-5" _ngcontent-amt-c1="" _nghost-amt-c8="">
+								<div class="categories-menu" _ngcontent-amt-c8=""><!----><!----><!---->
+									<div class="category-item ng-tns-c8-5 ng-star-inserted" _ngcontent-amt-c8="">
+										<eld-categories-menu-dropdown class="ng-tns-c8-5" _ngcontent-amt-c8="" _nghost-amt-c23="">
+											<div class="category-menu-dropdown" _ngcontent-amt-c23=""><!---->
+												<div class="category-menu-dropdown-item ng-star-inserted" _ngcontent-amt-c23="">
+													<a href="/buy-rocket-league-items/i/1-0" _ngcontent-amt-c23="">
+														<eld-shared-image _ngcontent-amt-c23="" _nghost-amt-c18=""><!----><!---->
+															<img class="app-image ng-star-inserted loaded" alt="Rocket League Items" src="https://assets.eldorado.gg/images/icons/v1/Rocket-League.png" _ngcontent-amt-c18="">
+														</eld-shared-image><span _ngcontent-amt-c23="">Rocket League Items</span>
+													</a>
+												</div>
+											</div>
+										</eld-categories-menu-dropdown>
+									</div><!---->
+								</eld-categories-menu>
+							</div>
+							<div class="navbar-content" _ngcontent-amt-c1=""><!---->
+								<div class="button-wrapper ng-tns-c1-1 ng-star-inserted" _ngcontent-amt-c1="">
+									<eld-shared-button class="ng-tns-c1-1" type="button" _ngcontent-amt-c1="" text="COMMON.SELL" _nghost-amt-c9="">
+										<button class="button waves-effect waves-light hyphenate button-gold" type="button" _ngcontent-amt-c9="">
+											<span class="button-text" _ngcontent-amt-c9=""><!----><!----> Sell </span>
+										</button>
+									</eld-shared-button>
+								</div>
+								<eld-navbar-links class="ng-tns-c1-1" _ngcontent-amt-c1="" _nghost-amt-c10="">
+									<div class="navbar-links" _ngcontent-amt-c10=""><!----><!---->
+										<a class="navbar-link ng-star-inserted" href="/games" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/games"> Games </a><!----><!----><!----><!----><!----><!---->
+										<a class="navbar-link ng-star-inserted" _ngcontent-amt-c10="" routerlinkactive="router-link-active"> Sign up </a>
+										<a class="navbar-link ng-star-inserted" _ngcontent-amt-c10="" routerlinkactive="router-link-active">
+											Log in
+										</a><!---->
+									</div>
+								</eld-navbar-links><!----><!----><!----><!----><!----><!---->
+							</div>
+						</nav>
+					</div>
+				</header>
+			</eld-navbar>
+
+
+
+			<div class="ng-tns-c0-0" id="top" _ngcontent-amt-c0="">
+			</div><div class="page-container container" _ngcontent-amt-c0="">
+				<div class="ng-tns-c0-0" _ngcontent-amt-c0=""><!----><!----><!----><!----></div>
+				<div class="main-content sidenav-not-visible" _ngcontent-amt-c0="">
+					<div class="router-outlet-wrapper" _ngcontent-amt-c0="">
+						<router-outlet class="ng-tns-c0-0" _ngcontent-amt-c0=""></router-outlet>
+											<eld-game-offer-page class="ng-tns-c52-29 ng-star-inserted" _nghost-amt-c52="">
+												<div class="game-offer-page" style='background-image: url("https://assets.eldorado.gg/images/others/v5/buy-offer-bg.jpg");' _ngcontent-amt-c52=""><!---->
+													<section class="base-container ng-tns-c52-29 ng-star-inserted" _ngcontent-amt-c52="">
+														<eld-breadcrumbs class="ng-tns-c52-29 ng-tns-c53-30" _ngcontent-amt-c52="" _nghost-amt-c53=""><!---->
+															<h5 class="breadcrumbs ng-tns-c53-30 ng-star-inserted" _ngcontent-amt-c53="">
+																<div class="ng-tns-c53-30" _ngcontent-amt-c53="">
+																	<a class="breadcrumb" href="/" _ngcontent-amt-c53="" routerlink="/">Home</a></div><!---->
+																	<div class="breadcrumb ng-tns-c53-30 ng-star-inserted" _ngcontent-amt-c53="">
+																		<span class="ng-tns-c53-30" _ngcontent-amt-c53="">&gt;</span>
+																		<a class="ng-tns-c53-30 ng-trigger ng-trigger-fadeIn" style="animation-play-state: running;" href="/world-of-warcraft-classic/g/14" _ngcontent-amt-c53=""> World of Warcraft Classic </a>
+																	</div>
+																	<div class="breadcrumb ng-tns-c53-30 ng-star-inserted" _ngcontent-amt-c53="">
+																		<span class="ng-tns-c53-30" _ngcontent-amt-c53="">&gt;</span>
+																		<a class="ng-tns-c53-30 ng-trigger ng-trigger-fadeIn" style="animation-play-state: running;" href="/world-of-warcraft-classic-currency/g/14-0" _ngcontent-amt-c53=""> Currency </a>
+																	</div>
+																	<div class="breadcrumb ng-tns-c53-30 ng-star-inserted" _ngcontent-amt-c53="">
+																		<span class="ng-tns-c53-30" _ngcontent-amt-c53="">&gt;</span>
+																		<a class="ng-tns-c53-30 ng-trigger ng-trigger-fadeIn" style="animation-play-state: running;" href="/wow-classic-gold/g/14-0-0" _ngcontent-amt-c53=""> Gold </a>
+																	</div>
+																	<div class="breadcrumb ng-tns-c53-30 ng-star-inserted" _ngcontent-amt-c53="">
+																		<span class="ng-tns-c53-30" _ngcontent-amt-c53="">&gt;</span>
+																		<a class="ng-tns-c53-30 ng-trigger ng-trigger-fadeIn" style="animation-play-state: running;" href="/wow-classic-gold/og/d9454ea7-fcc9-43b8-bba3-89175c4ff91f" _ngcontent-amt-c53=""> Offer </a>
+																	</div>
+																</h5>
+															</eld-breadcrumbs><!----><!----><!----><!---->
+															<div class="game-offer-section ng-tns-c52-29 ng-star-inserted" _ngcontent-amt-c52="">
+																<eld-game-offer-item-details-card class="ng-tns-c52-29 ng-tns-c54-31 ng-trigger ng-trigger-fadeIn" style="animation-play-state: running;" _ngcontent-amt-c52="" _nghost-amt-c54="">
+																	<div class="first-row" _ngcontent-amt-c54="">
+																		<div class="offer-gallery" _ngcontent-amt-c54="">
+																			<div class="image-container" _ngcontent-amt-c54=""><!----><!---->
+																				<eld-shared-image class="rounded-edges ng-tns-c54-31 ng-trigger ng-trigger-fadeIn ng-star-inserted" _nghost-amt-c18="" _ngcontent-amt-c54=""><!----><!---->
+																					<img class="app-image ng-star-inserted loaded" alt="Gold" src="https://assets.eldorado.gg/images/items/desktop/v6/14/wowc-gold.jpg" _ngcontent-amt-c18="">
+																				</eld-shared-image>
+																			</div><!---->
+																		</div><!---->
+																		<div class="offer-details ng-tns-c54-31 ng-trigger ng-trigger-fadeIn ng-star-inserted" _ngcontent-amt-c54="">
+																			<div class="offer-details-head" _ngcontent-amt-c54="">
+																				<eld-shared-offer-item-label class="ng-tns-c54-31 ng-tns-c50-33" _nghost-amt-c50="" _ngcontent-amt-c54=""><!---->
+																					<div class="offer-label ng-tns-c50-33 ng-trigger ng-trigger-fadeIn ng-star-inserted" _ngcontent-amt-c50="">
+																						<p class="ng-tns-c50-33" _ngcontent-amt-c50=""><!----><!---->
+																							<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
+																								<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
+																									<img class="ng-star-inserted" alt="eu-flag" src="https://assets.eldorado.gg/images/others/v5/eu-flag.png" _ngcontent-amt-c51=""><!---->
+																									<span _ngcontent-amt-c51="">EU</span></span>
+																							</eld-shared-trade-env-item>&nbsp;<!---->
+																							<span class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="">•</span>&nbsp; <!---->
+																							<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
+																							<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
+																								<span _ngcontent-amt-c51="">Shazzrah</span></span></eld-shared-trade-env-item>&nbsp;<!---->
+																							<span class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="">•</span>&nbsp; <!---->
+																							<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
+																								<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
+																									<span _ngcontent-amt-c51="">Horde</span>
+																								</span></eld-shared-trade-env-item>&nbsp;<!---->&nbsp;
+																						</p>
+																					</div>
+																				</eld-shared-offer-item-label>
+																				
+																			</div>
+																			<div class="offer-seller" _ngcontent-amt-c54="">
+																				<eld-shared-user-short-info class="ng-tns-c54-31" _nghost-amt-c60="" _ngcontent-amt-c54="">
+																					<div class="offer-seller-details" _ngcontent-amt-c60="">
+																						<eld-shared-profile-picture _ngcontent-amt-c60="" _nghost-amt-c63="">
+																							<div class="user-image" _ngcontent-amt-c63=""><!---->
+																								<img width="50" height="50" class="ng-star-inserted" alt="burrito" src="http://gold4vanilla.com/img/race_night_elf_female.png" _ngcontent-amt-c63=""><!---->
+																							</div>
+																						</eld-shared-profile-picture><!---->
+																						<div class="offer-seller-info ng-star-inserted" _ngcontent-amt-c60="">
+																							<h5 class="offer-seller-username" _ngcontent-amt-c60="">
+																								<a href="/users/google-oauth2%7C113172899376876979568?tab=Offers" _ngcontent-amt-c60="">burrito</a><!---->
+
+																							</h5>
+																							<div class="offer-seller-ratings" _ngcontent-amt-c60="">
+																								<a class="offer-seller-feedback-score small-chip-link" href="/users/google-oauth2%7C113172899376876979568?tab=Feedback" _ngcontent-amt-c60="">
+																									<span class="small-chip score-chip" _ngcontent-amt-c60="">
+																										<i class="material-icons" _ngcontent-amt-c60="">star</i><!---->
+																										<span class="ng-star-inserted" _ngcontent-amt-c60="">100%</span><!---->
+																									</span>
+																								</a>
+																								<span class="small-chip completed-orders-chip" _ngcontent-amt-c60="">
+																									<i class="material-icons" _ngcontent-amt-c60="">swap_horiz</i>
+																								<span _ngcontent-amt-c60="">11</span>
+																								</span>
+																							</div>
+																						</div>
+																					</div>
+																					<eld-shared-tooltip-content _ngcontent-amt-c60="" placement="top" _nghost-amt-c62="">
+																						<div class="tooltip top" role="tooltip" style="left: -100000px; top: -100000px;" _ngcontent-amt-c62="">
+																							<div class="tooltip-arrow" _ngcontent-amt-c62=""></div><div class="tooltip-inner hyphenate" _ngcontent-amt-c62=""> User successfully provided a government ID.
+																							</div>
+																						</div>
+																					</eld-shared-tooltip-content>
+																					<eld-shared-tooltip-content _ngcontent-amt-c60="" placement="top" _nghost-amt-c62="">
+																						<div class="tooltip top" role="tooltip" style="left: -100000px; top: -100000px;" _ngcontent-amt-c62="">
+																							<div class="tooltip-arrow" _ngcontent-amt-c62="">
+																							</div>
+																							<div class="tooltip-inner hyphenate" _ngcontent-amt-c62=""> Feedback score
+																							</div>
+																						</div>
+																					</eld-shared-tooltip-content>
+																					<eld-shared-tooltip-content _ngcontent-amt-c60="" placement="top" _nghost-amt-c62="">
+																						<div class="tooltip top" role="tooltip" style="left: -100000px; top: -100000px;" _ngcontent-amt-c62="">
+																							<div class="tooltip-arrow" _ngcontent-amt-c62=""></div>
+																							<div class="tooltip-inner hyphenate" _ngcontent-amt-c62=""> Completed orders
+																							</div>
+																						</div>
+																					</eld-shared-tooltip-content>
+																				</eld-shared-user-short-info>
+																				<div class="offer-seller-head" _ngcontent-amt-c54=""><!---->
+																					<span class="ng-tns-c54-31 ng-star-inserted" _ngcontent-amt-c54=""> Other sellers (8) </span>
+																				</div>
+																			</div>
+																		</div>
+																	</div><!---->
+																	<div class="offer-details-description ng-tns-c54-31 ng-star-inserted" _ngcontent-amt-c54="">
+																		Hola como te va
+																	</div>
+																</eld-game-offer-item-details-card>
+																<div class="buy-now-card ng-trigger ng-trigger-fadeIn" style="animation-play-state: running;" _ngcontent-amt-c52=""><!---->
+																	<eld-buy-now-card class="ng-tns-c55-32 ng-tns-c52-29 ng-star-inserted" _ngcontent-amt-c52="" _nghost-amt-c55=""><!---->
+																		<div class="ng-tns-c55-32 ng-trigger ng-trigger-fadeIn ng-untouched ng-pristine ng-valid ng-star-inserted" _ngcontent-amt-c55="">
+																			<div class="buy-unit-price-details" style='background-image: url("https://assets.eldorado.gg/images/others/v5/buy-offer-price-banner.png");' _ngcontent-amt-c55="">
+																				<div class="buy-unit-price" _ngcontent-amt-c55="">
+																					<h4 class="ng-tns-c55-32" _ngcontent-amt-c55=""> $0.20 </h4><!---->
+																					<span class="buy-unit-system ng-tns-c55-32 ng-star-inserted" _ngcontent-amt-c55=""> / unit </span>
+																				</div>
+																			</div>
+																			<div class="buy-details-wrapper" _ngcontent-amt-c55="">
+																				<div class="buy-delivery-time" _ngcontent-amt-c55="">
+																					<h6 class="ng-tns-c55-32" _ngcontent-amt-c55="">
+																						<i class="fa fa-clock"></i>
+																						<span class="ng-tns-c55-32" _ngcontent-amt-c55="">Delivery time</span>
+																					</h6>
+																					<div class="buy-delivery-time-entries row-sm" _ngcontent-amt-c55="">
+																						<div class="buy-delivery-time-entry col-sm" _ngcontent-amt-c55="">
+																							<span class="label" _ngcontent-amt-c55="">Seller Average</span>
+																							<div class="small-chip" _ngcontent-amt-c55=""><!---->
+																								<strong class="avg-delivery-time ng-tns-c55-32 ng-star-inserted" _ngcontent-amt-c55=""> 4 min </strong>
+																							</div>
+																						</div>
+																						<div class="buy-delivery-time-entry col-sm" _ngcontent-amt-c55="">
+																							<span class="label" _ngcontent-amt-c55="">Guaranteed</span>
+																							<div class="small-chip" _ngcontent-amt-c55="">
+																								<strong class="ng-tns-c55-32" _ngcontent-amt-c55="">20 min</strong>
+																							</div>
+																						</div>
+																					</div>
+																				</div><!----><!---->
+																				<div class="buy-details ng-tns-c55-32 ng-star-inserted" _ngcontent-amt-c55="">
+																					<span class="label" _ngcontent-amt-c55="">In Stock:</span>
+																					<h5 class="value" _ngcontent-amt-c55="">1,000 </h5>
+																				</div>
+																				<div class="buy-details ng-tns-c55-32 ng-star-inserted" _ngcontent-amt-c55="">
+																					<span class="label" _ngcontent-amt-c55="">Min Quantity:</span>
+																					<h5 class="value" _ngcontent-amt-c55="">5 </h5>
+																				</div>
+																				<div class="quantity-details ng-tns-c55-32 ng-star-inserted" _ngcontent-amt-c55="">
+																					<div class="label" _ngcontent-amt-c55="">
+																						<span class="ng-tns-c55-32" _ngcontent-amt-c55="">Quantity</span>
+																					</div>
+																					<eld-shared-numeric-input class="ng-tns-c55-32 ng-untouched ng-pristine ng-valid" _ngcontent-amt-c55="" _nghost-amt-c67="" formcontrolname="quantity">
+																						<div class="number-input-container with-controls" _ngcontent-amt-c67=""><!---->
+																							<div class="control subtract-control ng-star-inserted" _ngcontent-amt-c67="">
+																								<span _ngcontent-amt-c67="">-</span>
+																							</div>
+																							<div class="input-wrapper" _ngcontent-amt-c67="">
+																								<input class="input" type="text" maxlength="12" placeholder="" _ngcontent-amt-c67=""><!---->
+																							</div><!---->
+																							<div class="control add-control ng-star-inserted" _ngcontent-amt-c67="">
+																								<span _ngcontent-amt-c67="">+</span>
+																							</div>
+																						</div>
+																					</eld-shared-numeric-input>
+																				</div><!---->
+																				<hr class="separator ng-tns-c55-32 ng-star-inserted" _ngcontent-amt-c55="">
+																				<div class="buy-price" _ngcontent-amt-c55="">
+																					<span class="label" _ngcontent-amt-c55="">Price</span><!---->
+																					<h4 class="ng-tns-c55-32 ng-star-inserted" _ngcontent-amt-c55=""> $1.00 USD </h4><!---->
+																				</div>
+																				<div class="buy-button" _ngcontent-amt-c55=""><!---->
+																					<eld-shared-button class="ng-tns-c55-32 ng-star-inserted" text="COMMON.CHECKOUT" _nghost-amt-c9="" _ngcontent-amt-c55="" icon="verified_user">
+																						<button class="button waves-effect waves-light hyphenate button-apple-animated" _ngcontent-amt-c9="">
+																							<span class="button-text" _ngcontent-amt-c9=""><!---->
+																								<i class="material-icons ng-star-inserted" _ngcontent-amt-c9="">icon</i><!----> Checkout
+																							</span>
+																						</button>
+																					</eld-shared-button><!---->
+																				</div>
+																				<div class="validation-errors" _ngcontent-amt-c55=""><!---->
+																				</div><!---->
+																				<div class="buy-info ng-tns-c55-32 ng-star-inserted" _ngcontent-amt-c55="">
+																					<span class="ng-tns-c55-32" _ngcontent-amt-c55="">You won't be charged yet</span>
+																				</div>
+																			</div>
+																		</div>
+																		<eld-shared-tooltip-content class="ng-tns-c55-32" placement="top" _nghost-amt-c62="" _ngcontent-amt-c55="">
+																			<div class="tooltip top" role="tooltip" style="left: -100000px; top: -100000px;" _ngcontent-amt-c62="">
+																				<div class="tooltip-arrow" _ngcontent-amt-c62=""></div>
+																				<div class="tooltip-inner hyphenate" _ngcontent-amt-c62="">
+																					<eld-shared-discounts-tooltip-content class="ng-tns-c55-32" _ngcontent-amt-c55="" _nghost-amt-c69=""><!---->
+																					</eld-shared-discounts-tooltip-content>
+																				</div>
+																			</div>
+																		</eld-shared-tooltip-content>
+																	</eld-buy-now-card>
+																	<eld-trade-shield-block class="ng-tns-c52-29" _ngcontent-amt-c52="" _nghost-amt-c56="">
+																		<div class="trade-shield-block" _ngcontent-amt-c56="">
+																			<eld-svg-trade-shield _ngcontent-amt-c56="" _nghost-amt-c66="">
+																				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 52" width="54" height="52" xmlns="http://www.w3.org/2000/svg" _ngcontent-amt-c66=""><path opacity="0.15" fill="url(#paint0_linear)" d="M 32.0589 34 C 37.3449 36.7074 51.0633 34.2654 51.0633 34.2654 C 48.4623 41.2199 54 42.8656 54 42.8656 C 33.9048 53.9608 19.2634 51.8373 19.2634 51.8373 C 16.8301 41.6976 32.0589 34 32.0589 34 Z" _ngcontent-amt-c66="" />
+																				<path fill="url(#paint1_linear)" d="M 2.5339 0 C 2.5339 0 11.4576 6.45558 21.9237 0 C 21.9237 0 31.6186 18.8929 42.3602 24.5194 C 42.3602 24.5194 43.6271 47.6173 21.8686 49.0387 C 21.8686 49.0387 1.26695 31.8633 0 2.7836 L 2.5339 0 Z" _ngcontent-amt-c66="" />
+																				<path fill="url(#paint2_linear)" d="M 39.8263 27.2435 C 29.0847 21.6171 19.3898 2.72412 19.3898 2.72412 C 8.92373 9.1797 0 2.72412 0 2.72412 C 0 33.7583 19.3347 51.7036 19.3347 51.7036 C 41.0932 50.3414 39.8263 27.2435 39.8263 27.2435 Z" _ngcontent-amt-c66="" />
+																				<path opacity="0.74" fill="url(#paint3_linear)" d="M 25.7247 39.7405 L 23.7968 39.0298 C 23.5213 38.9114 23.4662 38.556 23.7417 38.3784 C 24.4578 37.9638 24.8984 37.49 24.9535 37.0162 L 26.3857 22.6244 C 26.4408 22.3282 26.2756 22.0913 26.0001 21.9729 L 24.7883 21.5583 C 24.6781 21.4991 24.5679 21.3806 24.5679 21.2622 L 24.4027 19.0708 C 24.0171 13.0298 21.6484 8.88406 17.7925 7.34419 C 16.4154 6.81116 13.3857 6.04123 11.4578 7.46264 C 11.4578 7.46264 11.9535 7.04806 11.1273 7.69955 C 8.8137 9.59476 9.08913 13.9774 9.1993 15.8727 L 9.25438 16.4057 C 9.25438 16.5241 9.1993 16.7018 9.08913 16.761 C 8.4832 17.1164 7.87726 17.4125 7.71201 17.531 C 7.49167 17.5902 7.32642 17.7679 7.32642 18.064 L 8.70353 38.9114 C 8.70353 38.9706 8.75862 39.0891 8.8137 39.0891 L 23.2459 44.5378 C 23.301 44.5378 23.3561 44.5378 23.3561 44.5378 C 23.4662 44.597 25.3391 43.531 25.9451 43.1164 C 26.0552 43.0572 26.1103 42.9387 26.1103 42.761 L 25.89 40.2143 C 25.8349 39.9182 25.8349 39.7998 25.7247 39.7405 Z M 15.2586 9.41709 C 19.2247 11.0162 20.3815 15.695 20.6018 19.3077 L 20.6569 19.9592 L 13.2756 17.1164 C 13.1654 17.0572 13.0552 16.9387 13.0552 16.8203 L 12.9451 15.5765 C 12.89 14.3328 12.6146 10.4831 14.1018 9.23941 C 14.1569 9.18018 14.2671 9.12096 14.3773 9.06173 C 14.6527 9.18018 14.9281 9.23941 15.2586 9.41709 Z" _ngcontent-amt-c66="" />
+																				<path fill="url(#paint4_linear)" d="M 18.3432 47.499 L 6.33472 40.6289 C 6.27964 40.5696 6.11438 40.5696 6.11438 40.4512 L 2.64404 20.4922 C 2.97455 20.3145 5.17794 18.9523 5.50845 19.0708 L 21.2076 25.1118 C 21.3178 25.171 21.3729 25.2302 21.3729 25.3487 L 19.8856 40.0366 C 19.7754 40.925 18.3983 41.6357 16.5254 42.4648 L 10.1356 35.1801 C 10.0805 35.1209 10.0254 35.0617 10.0254 34.9432 L 7.76692 27.8954 C 7.76692 27.8954 10.5212 26.2371 11.1822 26.5924 L 16.9661 30.3236 C 17.0212 30.3828 17.0762 30.5013 17.0762 30.5605 L 16.1398 33.6402 C 16.0296 33.8179 15.589 34.114 15.1483 34.2917 L 13.4407 35.1801 C 13.3305 35.1801 13.9915 32.8111 13.9915 32.6926 L 14.322 31.6858 C 14.322 31.5673 14.322 31.5081 14.2118 31.4489 L 13.1652 30.9159 C 13 30.7974 12.8347 30.9159 12.7796 31.0935 L 12.7246 33.4626 C 12.7246 33.5218 12.7796 33.6402 12.8347 33.6995 L 17.1864 36.8384 C 17.3517 36.9569 17.5169 36.8384 17.5169 36.6607 L 18.4534 27.2439 C 18.4534 27.1254 18.3983 27.007 18.2881 27.007 L 7.98726 23.0389 C 7.82201 22.9796 7.65675 23.0981 7.65675 23.2758 L 8.5932 38.2598 C 8.5932 38.3191 8.64828 38.4375 8.70337 38.4375 L 20.5466 42.7017 C 20.6568 42.761 20.6568 42.8794 20.7118 43.1163 L 20.9873 45.8407 C 21.0423 46.0776 18.4534 47.5582 18.3432 47.499 Z" _ngcontent-amt-c66="" />
+																				<path fill="url(#paint5_linear)" d="M 18.178 47.4398 L 3.74583 42.0503 C 3.69075 41.9911 3.63566 41.9319 3.63566 41.8726 L 2.25854 20.966 C 2.25854 20.6107 2.53397 20.3738 2.86448 20.4922 L 18.5636 26.5332 C 18.6738 26.5925 18.7289 26.6517 18.7289 26.7701 L 17.2416 41.4581 C 17.1314 42.3465 16.2501 42.8203 15.534 42.2872 L 7.4916 36.5424 C 7.43651 36.4831 7.38143 36.4239 7.38143 36.3054 L 7.4916 28.5469 C 7.43651 27.8362 7.87719 27.5993 8.53821 27.9547 L 14.3221 31.6859 C 14.3772 31.7451 14.4323 31.8635 14.4323 31.9228 L 13.4958 35.0025 C 13.4958 35.1209 13.3306 35.2394 13.2204 35.1802 L 11.5679 34.4695 C 11.4577 34.4695 11.3475 34.2918 11.4026 34.1733 L 11.7331 33.1665 C 11.7331 33.048 11.7331 32.9888 11.623 32.9296 L 10.5763 32.3966 C 10.4111 32.2781 10.2458 32.3966 10.1907 32.5742 L 10.1357 34.9433 C 10.1357 35.0025 10.1907 35.1209 10.2458 35.1802 L 14.5975 38.3191 C 14.7628 38.4376 14.928 38.3191 14.928 38.1414 L 15.8645 28.7246 C 15.8645 28.6061 15.8094 28.4877 15.6992 28.4877 L 5.45346 24.4603 C 5.28821 24.4011 5.12295 24.5196 5.12295 24.6973 L 6.11448 39.6813 C 6.11448 39.7405 6.16956 39.859 6.22465 39.859 L 18.0679 44.1232 C 18.178 44.1824 18.178 44.2417 18.2331 44.597 L 18.5085 47.2622 C 18.4535 47.4991 18.3433 47.4991 18.178 47.4398 Z" _ngcontent-amt-c66="" />
+																				<path fill="url(#paint6_linear)" d="M 19.3348 24.934 L 17.5721 25.7631 C 17.3518 25.7039 17.5721 24.9932 17.517 24.8747 L 17.3518 22.2096 C 17.1315 18.5376 15.9747 13.8588 12.0086 12.3189 C 10.6865 11.7859 9.63993 11.7859 9.034 12.2597 C 7.54671 13.4442 7.82213 17.2939 7.87722 18.5968 L 8.04247 20.3736 C 8.04247 20.492 7.98739 20.6105 7.87722 20.6105 L 6.16959 21.262 C 6.00434 21.2028 6.05942 20.5513 6.05942 20.4328 L 5.94925 18.7745 C 5.83908 16.8793 3.9662 12.4374 6.27976 10.6014 C 7.49162 9.65378 10.7416 9.17997 12.7247 10.0091 C 16.5806 11.549 18.9493 16.1094 19.3348 22.1504 L 19.5552 24.8155 C 19.5552 24.8155 19.445 24.934 19.3348 24.934 Z" _ngcontent-amt-c66="" />
+																				<path fill="url(#paint7_linear)" d="M 17.5721 25.7629 L 15.9747 25.1706 C 15.7544 25.1114 15.7544 25.1114 15.7544 24.993 L 15.5891 22.3278 C 15.3688 18.6558 14.212 13.977 10.2459 12.4371 C 8.92384 11.9041 7.87723 11.9041 7.2713 12.3779 C 5.78401 13.5624 6.05943 17.4121 6.11452 18.7151 L 6.27977 21.0841 C 6.27977 21.2025 6.22469 21.321 6.11452 21.321 L 4.51706 20.7287 C 4.35181 20.6695 4.29672 20.6695 4.29672 20.551 L 4.18655 18.8927 C 4.0213 16.9383 3.74588 12.5556 6.05943 10.7196 C 7.2713 9.772 8.92384 9.65355 10.9069 10.4827 C 14.7628 12.0226 17.1315 16.1684 17.5171 22.2094 L 17.7374 25.526 C 17.7374 25.6444 17.6823 25.7629 17.5721 25.7629 Z" _ngcontent-amt-c66="" />
+																				<defs _ngcontent-amt-c66="">
+																				<linearGradient id="paint0_linear" gradientUnits="userSpaceOnUse" x1="43.8769" y1="29.0201" x2="26.4039" y2="52.9366" _ngcontent-amt-c66=""><stop stop-color="#fafafa" _ngcontent-amt-c66="" /><stop stop-color="#2d2e3f" offset="0.7848" _ngcontent-amt-c66="" />
+																				</linearGradient>
+																				<linearGradient id="paint1_linear" gradientUnits="userSpaceOnUse" x1="0" y1="24.4915" x2="42.3819" y2="24.4915" _ngcontent-amt-c66="">
+																				<stop stop-color="#ffc001" _ngcontent-amt-c66="" />
+																				<stop stop-color="#ff9e00" offset="1" _ngcontent-amt-c66="" />
+																			  </linearGradient>
+																				<linearGradient id="paint2_linear" gradientUnits="userSpaceOnUse" x1="5.92655e-005" y1="27.2353" x2="39.8296" y2="27.2353" _ngcontent-amt-c66=""><stop stop-color="#ffd44e" _ngcontent-amt-c66="" /><stop stop-color="#ffb100" offset="1" _ngcontent-amt-c66="" />
+																				</linearGradient>
+																				<linearGradient id="paint3_linear" gradientUnits="userSpaceOnUse" x1="7.32801" y1="25.5515" x2="26.3687" y2="25.5515" _ngcontent-amt-c66=""><stop stop-color="#ffc001" _ngcontent-amt-c66="" /><stop stop-color="#ff9e00" offset="1" _ngcontent-amt-c66="" /></linearGradient><linearGradient id="paint4_linear" gradientUnits="userSpaceOnUse" x1="3.5126" y1="33.9114" x2="21.8199" y2="32.722" _ngcontent-amt-c66=""><stop stop-color="#ffc926" _ngcontent-amt-c66="" /><stop stop-color="#ff8d00" offset="1" _ngcontent-amt-c66="" />
+																				</linearGradient>
+																				<linearGradient id="paint5_linear" gradientUnits="userSpaceOnUse" x1="3.15445" y1="34.5308" x2="19.177" y2="33.4897" _ngcontent-amt-c66=""><stop stop-color="#fff8e1" _ngcontent-amt-c66="" /><stop stop-color="#ffdf81" offset="1" _ngcontent-amt-c66="" /></linearGradient><linearGradient id="paint6_linear" gradientUnits="userSpaceOnUse" x1="5.38442" y1="18.2604" x2="19.0573" y2="17.372" _ngcontent-amt-c66=""><stop stop-color="#ffc926" _ngcontent-amt-c66="" /><stop stop-color="#ff8d00" offset="1" _ngcontent-amt-c66="" />
+																				</linearGradient>
+																				<linearGradient id="paint7_linear" gradientUnits="userSpaceOnUse" x1="4.11296" y1="18.4801" x2="17.2329" y2="17.6276" _ngcontent-amt-c66="">
+																				<stop stop-color="#fff8e1" _ngcontent-amt-c66="" />
+																				<stop stop-color="#ffdf81" offset="1" _ngcontent-amt-c66="" />
+																			  </linearGradient>
+																			</defs>
+																		</svg>
+
+																	</eld-svg-trade-shield><div class="trade-shield-text" _ngcontent-amt-c56="">
+																		<div class="trade-shield-text-top" _ngcontent-amt-c56="">
+																			<h3 _ngcontent-amt-c56="">TradeShield</h3>
+																			<a href="" target="_blank" _ngcontent-amt-c56=""> Learn more </a>
+																		</div>
+																		<p _ngcontent-amt-c56="">100% Secure Payments guarantee</p>
+																		</div>
+																	</div>
+																</eld-trade-shield-block><!---->
+															</div>
+														</div><!----><!----><!----><!---->
+
+
+<iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-90f3a29ef7448451db5af955688970d7.html" style="width: 1px !important; height: 1px !important; display: none !important; opacity: 0 !important; pointer-events: none !important;"></iframe><iframe tabindex="-1" title="No content" aria-hidden="true" src="about:blank" style="border: 0px currentColor; border-image: none; top: -9999px; width: 0px; height: 0px; position: absolute;" data-product="web_widget"></iframe><div><iframe tabindex="0" title="Opens a widget where you can chat to one of our agents" class="zEWidget-launcher zEWidget-launcher--active" id="launcher" style="background: none; margin: 10px 20px; border: currentColor; border-image: none; width: 109px; height: 50px; right: 0px; bottom: 0px; position: fixed; z-index: 999998; min-height: 50px; max-height: 551px; opacity: 1; transform: translateZ(0px);"></iframe></div><div><iframe tabindex="-1" title="Find more information here" class="zEWidget-webWidget " id="webWidget" style="background: none; border: currentColor; border-image: none; top: -9999px; width: 357px; height: 100%; margin-right: 8px; margin-left: 8px; visibility: hidden; position: fixed; z-index: 999999; min-height: 150px; max-height: 565px; opacity: 0; transform: translateZ(0px);"></iframe></div></body>
+</html>

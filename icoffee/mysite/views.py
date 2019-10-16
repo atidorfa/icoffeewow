@@ -18,3 +18,9 @@ def pagamenos(request):
 
 def wow(request):
         return render(request, 'wow.html')
+
+def wow_classic_gold(request):
+        return render(request, 'wow-classic-gold.html')
+
+def offer(request):
+        return render(request, 'offer.html')
