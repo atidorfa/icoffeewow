@@ -17,10 +17,16 @@ def pagamenos(request):
         return render(request, 'pagamenos.html')
 
 def wow(request):
-        return render(request, 'wow.html')
+        return render(request, 'indexw.html')
 
-def wow_classic_gold(request):
-        return render(request, 'wow-classic-gold.html')
+def gold(request):
+        return render(request, 'gold.html')
 
 def offer(request):
         return render(request, 'offer.html')
+
+def leveling(request):
+        return render(request, '404.html')
+
+def characters(request):
+        return render(request, 'characters.html')
