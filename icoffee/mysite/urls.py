@@ -11,5 +11,6 @@ urlpatterns = [
     path('gold', views.gold, name='gold'),
     path('offer', views.offer, name='offer'),
     path('characters', views.characters, name='characters'),
-    path('leveling', views.leveling, name='leveling')
+    path('leveling', views.leveling, name='leveling'),
+    path('summary', views.summary, name='summary')
 ]
