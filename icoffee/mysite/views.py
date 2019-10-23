@@ -17,7 +17,7 @@ def pagamenos(request):
         return render(request, 'pagamenos.html')
 
 def wow(request):
-        return render(request, 'indexw.html')
+        return render(request, 'gold.html')
 
 def gold(request):
         return render(request, 'gold.html')
@@ -30,3 +30,6 @@ def leveling(request):
 
 def characters(request):
         return render(request, 'characters.html')
+
+def summary(request):
+        return render(request, 'summary.html')
