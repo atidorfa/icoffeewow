@@ -33,3 +33,12 @@ def characters(request):
 
 def summary(request):
         return render(request, 'summary.html')
+
+def buy(request):
+        return render(request, 'buy.html')
+
+def sell(request):
+        return render(request, 'sell.html')
+
+def contact(request):
+        return render(request, 'contact.html')
