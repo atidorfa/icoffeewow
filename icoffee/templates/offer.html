@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title></title>
+<title>iCoffee - WoW Classic</title>
+<link rel="shortcut icon" href="{% static 'img/cof.ico' %}">
 <style>
 
 * {
@@ -1438,7 +1439,7 @@ body .buorg #buorgig {
 </style>
 
 </head>
-<body onload="quantPlus();">
+<body onload="updateRealm();">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 	<eld-root class="ng-tns-c0-0" _nghost-amt-c0="" ng-version="8.1.3">
@@ -1465,15 +1466,17 @@ body .buorg #buorgig {
 							<div class="navbar-content" _ngcontent-amt-c1=""><!---->
 								<div class="button-wrapper ng-tns-c1-1 ng-star-inserted" _ngcontent-amt-c1="">
 									<eld-shared-button class="ng-tns-c1-1" type="button" _ngcontent-amt-c1="" text="COMMON.SELL" _nghost-amt-c9="">
+									<a href="/gold">
 										<button class="button waves-effect waves-light hyphenate button-gold" type="button" _ngcontent-amt-c9="">
-											<span class="button-text" _ngcontent-amt-c9=""><!----><!----> Gold </span>
+											<span class="button-text" _ngcontent-amt-c9=""><!----><!---->Gold </span>
 										</button>
+									</a>
 									</eld-shared-button>
 								</div>
 								<eld-navbar-links class="ng-tns-c1-1" _ngcontent-amt-c1="" _nghost-amt-c10="">
 									<div class="navbar-links" _ngcontent-amt-c10=""><!----><!---->
-										<a class="navbar-link ng-star-inserted" href="/gold" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/gold"> Buy </a>
-										<a class="navbar-link ng-star-inserted" href="/sell" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/sell"> Sell </a><!----><!----><!----><!----><!----><!---->
+										<a class="navbar-link ng-star-inserted" href="/buy" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/buy"> Buy </a>
+										<a class="navbar-link ng-star-inserted" href="/sell" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/sell"> Sell </a>
 										<a class="navbar-link ng-star-inserted" href="/contact" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/contact"> Contact </a>
 									</div>
 								</eld-navbar-links><!----><!----><!----><!----><!----><!---->
@@ -1529,17 +1532,17 @@ body .buorg #buorgig {
 																						<p class="ng-tns-c50-33" _ngcontent-amt-c50=""><!----><!---->
 																							<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
 																								<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
-																									<img class="ng-star-inserted" alt="eu-flag" src="https://assets.eldorado.gg/images/others/v5/eu-flag.png" _ngcontent-amt-c51=""><!---->
-																									<span _ngcontent-amt-c51="">EU</span></span>
+																									<img id="flag" class="ng-star-inserted" alt="" src="" _ngcontent-amt-c51=""><!---->
+																									<span id="region" _ngcontent-amt-c51="">EU</span></span>
 																							</eld-shared-trade-env-item>&nbsp;<!---->
 																							<span class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="">•</span>&nbsp; <!---->
 																							<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
 																							<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
-																								<span _ngcontent-amt-c51="">Shazzrah</span></span></eld-shared-trade-env-item>&nbsp;<!---->
+																								<span id="server" _ngcontent-amt-c51="">Shazzrah</span></span></eld-shared-trade-env-item>&nbsp;<!---->
 																							<span class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="">•</span>&nbsp; <!---->
 																							<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
 																								<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
-																									<span _ngcontent-amt-c51="">Horde</span>
+																									<span id="faction" _ngcontent-amt-c51="">Horde</span>
 																								</span></eld-shared-trade-env-item>&nbsp;<!---->&nbsp;
 																						</p>
 																					</div>
@@ -1564,12 +1567,12 @@ body .buorg #buorgig {
 																								<a class="offer-seller-feedback-score small-chip-link" href="/users/google-oauth2%7C113172899376876979568?tab=Feedback" _ngcontent-amt-c60="">
 																									<span class="small-chip score-chip" _ngcontent-amt-c60="">
 																										<i class="fas fa-star"></i><!---->
-																										<span class="ng-star-inserted" _ngcontent-amt-c60="">100%</span><!---->
+																										<span class="ng-star-inserted" _ngcontent-amt-c60="">98%</span><!---->
 																									</span>
 																								</a>
 																								<span class="small-chip completed-orders-chip" _ngcontent-amt-c60="">
 																									<i class="fas fa-exchange-alt"></i>
-																								<span _ngcontent-amt-c60="">11</span>
+																								<span _ngcontent-amt-c60="">1124</span>
 																								</span>
 																							</div>
 																						</div>
@@ -1577,9 +1580,6 @@ body .buorg #buorgig {
 
 																				<br>
 
-																				<div class="offer-seller-head" _ngcontent-amt-c54=""><!---->
-																					<span class="ng-tns-c54-31 ng-star-inserted" _ngcontent-amt-c54=""> Other sellers (8) </span>
-																				</div>
 																			</div>
 																		</div>
 																	</div><!---->
@@ -1650,7 +1650,7 @@ body .buorg #buorgig {
 																				<hr class="separator ng-tns-c55-32 ng-star-inserted" _ngcontent-amt-c55="">
 																				<div class="buy-price" _ngcontent-amt-c55="">
 																					<span class="label" _ngcontent-amt-c55="">Price</span><!---->
-																					<h4 class="ng-tns-c55-32 ng-star-inserted" _ngcontent-amt-c55="" id="price"> $1.00 USD </h4><!---->
+																					<h4 class="ng-tns-c55-32 ng-star-inserted" _ngcontent-amt-c55="" id="price"> $0.00 USD </h4><!---->
 																				</div>
 																				<div class="buy-button" _ngcontent-amt-c55=""><!---->
 																					<eld-shared-button class="ng-tns-c55-32 ng-star-inserted" text="COMMON.CHECKOUT" _nghost-amt-c9="" _ngcontent-amt-c55="" icon="verified_user">
@@ -1682,47 +1682,6 @@ body .buorg #buorgig {
 																			</div>
 																		</eld-shared-tooltip-content>
 																	</eld-buy-now-card>
-																	<eld-trade-shield-block class="ng-tns-c52-29" _ngcontent-amt-c52="" _nghost-amt-c56="">
-																		<div class="trade-shield-block" _ngcontent-amt-c56="">
-																			<eld-svg-trade-shield _ngcontent-amt-c56="" _nghost-amt-c66="">
-																				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 52" width="54" height="52" xmlns="http://www.w3.org/2000/svg" _ngcontent-amt-c66="">
-																					<path opacity="0.15" fill="url(#paint0_linear)" d="M 32.0589 34 C 37.3449 36.7074 51.0633 34.2654 51.0633 34.2654 C 48.4623 41.2199 54 42.8656 54 42.8656 C 33.9048 53.9608 19.2634 51.8373 19.2634 51.8373 C 16.8301 41.6976 32.0589 34 32.0589 34 Z" _ngcontent-amt-c66="" />
-																				<path fill="url(#paint1_linear)" d="M 2.5339 0 C 2.5339 0 11.4576 6.45558 21.9237 0 C 21.9237 0 31.6186 18.8929 42.3602 24.5194 C 42.3602 24.5194 43.6271 47.6173 21.8686 49.0387 C 21.8686 49.0387 1.26695 31.8633 0 2.7836 L 2.5339 0 Z" _ngcontent-amt-c66="" />
-																				<path fill="url(#paint2_linear)" d="M 39.8263 27.2435 C 29.0847 21.6171 19.3898 2.72412 19.3898 2.72412 C 8.92373 9.1797 0 2.72412 0 2.72412 C 0 33.7583 19.3347 51.7036 19.3347 51.7036 C 41.0932 50.3414 39.8263 27.2435 39.8263 27.2435 Z" _ngcontent-amt-c66="" />
-																				<path opacity="0.74" fill="url(#paint3_linear)" d="M 25.7247 39.7405 L 23.7968 39.0298 C 23.5213 38.9114 23.4662 38.556 23.7417 38.3784 C 24.4578 37.9638 24.8984 37.49 24.9535 37.0162 L 26.3857 22.6244 C 26.4408 22.3282 26.2756 22.0913 26.0001 21.9729 L 24.7883 21.5583 C 24.6781 21.4991 24.5679 21.3806 24.5679 21.2622 L 24.4027 19.0708 C 24.0171 13.0298 21.6484 8.88406 17.7925 7.34419 C 16.4154 6.81116 13.3857 6.04123 11.4578 7.46264 C 11.4578 7.46264 11.9535 7.04806 11.1273 7.69955 C 8.8137 9.59476 9.08913 13.9774 9.1993 15.8727 L 9.25438 16.4057 C 9.25438 16.5241 9.1993 16.7018 9.08913 16.761 C 8.4832 17.1164 7.87726 17.4125 7.71201 17.531 C 7.49167 17.5902 7.32642 17.7679 7.32642 18.064 L 8.70353 38.9114 C 8.70353 38.9706 8.75862 39.0891 8.8137 39.0891 L 23.2459 44.5378 C 23.301 44.5378 23.3561 44.5378 23.3561 44.5378 C 23.4662 44.597 25.3391 43.531 25.9451 43.1164 C 26.0552 43.0572 26.1103 42.9387 26.1103 42.761 L 25.89 40.2143 C 25.8349 39.9182 25.8349 39.7998 25.7247 39.7405 Z M 15.2586 9.41709 C 19.2247 11.0162 20.3815 15.695 20.6018 19.3077 L 20.6569 19.9592 L 13.2756 17.1164 C 13.1654 17.0572 13.0552 16.9387 13.0552 16.8203 L 12.9451 15.5765 C 12.89 14.3328 12.6146 10.4831 14.1018 9.23941 C 14.1569 9.18018 14.2671 9.12096 14.3773 9.06173 C 14.6527 9.18018 14.9281 9.23941 15.2586 9.41709 Z" _ngcontent-amt-c66="" />
-																				<path fill="url(#paint4_linear)" d="M 18.3432 47.499 L 6.33472 40.6289 C 6.27964 40.5696 6.11438 40.5696 6.11438 40.4512 L 2.64404 20.4922 C 2.97455 20.3145 5.17794 18.9523 5.50845 19.0708 L 21.2076 25.1118 C 21.3178 25.171 21.3729 25.2302 21.3729 25.3487 L 19.8856 40.0366 C 19.7754 40.925 18.3983 41.6357 16.5254 42.4648 L 10.1356 35.1801 C 10.0805 35.1209 10.0254 35.0617 10.0254 34.9432 L 7.76692 27.8954 C 7.76692 27.8954 10.5212 26.2371 11.1822 26.5924 L 16.9661 30.3236 C 17.0212 30.3828 17.0762 30.5013 17.0762 30.5605 L 16.1398 33.6402 C 16.0296 33.8179 15.589 34.114 15.1483 34.2917 L 13.4407 35.1801 C 13.3305 35.1801 13.9915 32.8111 13.9915 32.6926 L 14.322 31.6858 C 14.322 31.5673 14.322 31.5081 14.2118 31.4489 L 13.1652 30.9159 C 13 30.7974 12.8347 30.9159 12.7796 31.0935 L 12.7246 33.4626 C 12.7246 33.5218 12.7796 33.6402 12.8347 33.6995 L 17.1864 36.8384 C 17.3517 36.9569 17.5169 36.8384 17.5169 36.6607 L 18.4534 27.2439 C 18.4534 27.1254 18.3983 27.007 18.2881 27.007 L 7.98726 23.0389 C 7.82201 22.9796 7.65675 23.0981 7.65675 23.2758 L 8.5932 38.2598 C 8.5932 38.3191 8.64828 38.4375 8.70337 38.4375 L 20.5466 42.7017 C 20.6568 42.761 20.6568 42.8794 20.7118 43.1163 L 20.9873 45.8407 C 21.0423 46.0776 18.4534 47.5582 18.3432 47.499 Z" _ngcontent-amt-c66="" />
-																				<path fill="url(#paint5_linear)" d="M 18.178 47.4398 L 3.74583 42.0503 C 3.69075 41.9911 3.63566 41.9319 3.63566 41.8726 L 2.25854 20.966 C 2.25854 20.6107 2.53397 20.3738 2.86448 20.4922 L 18.5636 26.5332 C 18.6738 26.5925 18.7289 26.6517 18.7289 26.7701 L 17.2416 41.4581 C 17.1314 42.3465 16.2501 42.8203 15.534 42.2872 L 7.4916 36.5424 C 7.43651 36.4831 7.38143 36.4239 7.38143 36.3054 L 7.4916 28.5469 C 7.43651 27.8362 7.87719 27.5993 8.53821 27.9547 L 14.3221 31.6859 C 14.3772 31.7451 14.4323 31.8635 14.4323 31.9228 L 13.4958 35.0025 C 13.4958 35.1209 13.3306 35.2394 13.2204 35.1802 L 11.5679 34.4695 C 11.4577 34.4695 11.3475 34.2918 11.4026 34.1733 L 11.7331 33.1665 C 11.7331 33.048 11.7331 32.9888 11.623 32.9296 L 10.5763 32.3966 C 10.4111 32.2781 10.2458 32.3966 10.1907 32.5742 L 10.1357 34.9433 C 10.1357 35.0025 10.1907 35.1209 10.2458 35.1802 L 14.5975 38.3191 C 14.7628 38.4376 14.928 38.3191 14.928 38.1414 L 15.8645 28.7246 C 15.8645 28.6061 15.8094 28.4877 15.6992 28.4877 L 5.45346 24.4603 C 5.28821 24.4011 5.12295 24.5196 5.12295 24.6973 L 6.11448 39.6813 C 6.11448 39.7405 6.16956 39.859 6.22465 39.859 L 18.0679 44.1232 C 18.178 44.1824 18.178 44.2417 18.2331 44.597 L 18.5085 47.2622 C 18.4535 47.4991 18.3433 47.4991 18.178 47.4398 Z" _ngcontent-amt-c66="" />
-																				<path fill="url(#paint6_linear)" d="M 19.3348 24.934 L 17.5721 25.7631 C 17.3518 25.7039 17.5721 24.9932 17.517 24.8747 L 17.3518 22.2096 C 17.1315 18.5376 15.9747 13.8588 12.0086 12.3189 C 10.6865 11.7859 9.63993 11.7859 9.034 12.2597 C 7.54671 13.4442 7.82213 17.2939 7.87722 18.5968 L 8.04247 20.3736 C 8.04247 20.492 7.98739 20.6105 7.87722 20.6105 L 6.16959 21.262 C 6.00434 21.2028 6.05942 20.5513 6.05942 20.4328 L 5.94925 18.7745 C 5.83908 16.8793 3.9662 12.4374 6.27976 10.6014 C 7.49162 9.65378 10.7416 9.17997 12.7247 10.0091 C 16.5806 11.549 18.9493 16.1094 19.3348 22.1504 L 19.5552 24.8155 C 19.5552 24.8155 19.445 24.934 19.3348 24.934 Z" _ngcontent-amt-c66="" />
-																				<path fill="url(#paint7_linear)" d="M 17.5721 25.7629 L 15.9747 25.1706 C 15.7544 25.1114 15.7544 25.1114 15.7544 24.993 L 15.5891 22.3278 C 15.3688 18.6558 14.212 13.977 10.2459 12.4371 C 8.92384 11.9041 7.87723 11.9041 7.2713 12.3779 C 5.78401 13.5624 6.05943 17.4121 6.11452 18.7151 L 6.27977 21.0841 C 6.27977 21.2025 6.22469 21.321 6.11452 21.321 L 4.51706 20.7287 C 4.35181 20.6695 4.29672 20.6695 4.29672 20.551 L 4.18655 18.8927 C 4.0213 16.9383 3.74588 12.5556 6.05943 10.7196 C 7.2713 9.772 8.92384 9.65355 10.9069 10.4827 C 14.7628 12.0226 17.1315 16.1684 17.5171 22.2094 L 17.7374 25.526 C 17.7374 25.6444 17.6823 25.7629 17.5721 25.7629 Z" _ngcontent-amt-c66="" />
-																				<defs _ngcontent-amt-c66="">
-																				<linearGradient id="paint0_linear" gradientUnits="userSpaceOnUse" x1="43.8769" y1="29.0201" x2="26.4039" y2="52.9366" _ngcontent-amt-c66=""><stop stop-color="#fafafa" _ngcontent-amt-c66="" /><stop stop-color="#2d2e3f" offset="0.7848" _ngcontent-amt-c66="" />
-																				</linearGradient>
-																				<linearGradient id="paint1_linear" gradientUnits="userSpaceOnUse" x1="0" y1="24.4915" x2="42.3819" y2="24.4915" _ngcontent-amt-c66="">
-																				<stop stop-color="#ffc001" _ngcontent-amt-c66="" />
-																				<stop stop-color="#ff9e00" offset="1" _ngcontent-amt-c66="" />
-																			  </linearGradient>
-																				<linearGradient id="paint2_linear" gradientUnits="userSpaceOnUse" x1="5.92655e-005" y1="27.2353" x2="39.8296" y2="27.2353" _ngcontent-amt-c66=""><stop stop-color="#ffd44e" _ngcontent-amt-c66="" /><stop stop-color="#ffb100" offset="1" _ngcontent-amt-c66="" />
-																				</linearGradient>
-																				<linearGradient id="paint3_linear" gradientUnits="userSpaceOnUse" x1="7.32801" y1="25.5515" x2="26.3687" y2="25.5515" _ngcontent-amt-c66=""><stop stop-color="#ffc001" _ngcontent-amt-c66="" /><stop stop-color="#ff9e00" offset="1" _ngcontent-amt-c66="" /></linearGradient><linearGradient id="paint4_linear" gradientUnits="userSpaceOnUse" x1="3.5126" y1="33.9114" x2="21.8199" y2="32.722" _ngcontent-amt-c66=""><stop stop-color="#ffc926" _ngcontent-amt-c66="" /><stop stop-color="#ff8d00" offset="1" _ngcontent-amt-c66="" />
-																				</linearGradient>
-																				<linearGradient id="paint5_linear" gradientUnits="userSpaceOnUse" x1="3.15445" y1="34.5308" x2="19.177" y2="33.4897" _ngcontent-amt-c66=""><stop stop-color="#fff8e1" _ngcontent-amt-c66="" /><stop stop-color="#ffdf81" offset="1" _ngcontent-amt-c66="" /></linearGradient><linearGradient id="paint6_linear" gradientUnits="userSpaceOnUse" x1="5.38442" y1="18.2604" x2="19.0573" y2="17.372" _ngcontent-amt-c66=""><stop stop-color="#ffc926" _ngcontent-amt-c66="" /><stop stop-color="#ff8d00" offset="1" _ngcontent-amt-c66="" />
-																				</linearGradient>
-																				<linearGradient id="paint7_linear" gradientUnits="userSpaceOnUse" x1="4.11296" y1="18.4801" x2="17.2329" y2="17.6276" _ngcontent-amt-c66="">
-																				<stop stop-color="#fff8e1" _ngcontent-amt-c66="" />
-																				<stop stop-color="#ffdf81" offset="1" _ngcontent-amt-c66="" />
-																			  </linearGradient>
-																			</defs>
-																		</svg>
-
-																	</eld-svg-trade-shield><div class="trade-shield-text" _ngcontent-amt-c56="">
-																		<div class="trade-shield-text-top" _ngcontent-amt-c56="">
-																			<h3 _ngcontent-amt-c56="">TradeShield</h3>
-																			<a href="" target="_blank" _ngcontent-amt-c56=""> Learn more </a>
-																		</div>
-																		<p _ngcontent-amt-c56="">100% Secure Payments guarantee</p>
-																		</div>
-																	</div>
-																</eld-trade-shield-block><!---->
 															</div>
 														</div><!----><!----><!----><!---->
 
@@ -1764,8 +1723,35 @@ function updatePrice()
 		price = Math.round(price * 100) / 100
 		document.getElementById('quantity').value = quant;
 		document.getElementById('price').innerHTML = "$" + price + " USD";
+		localStorage.setItem("localquant", quant);
 		localStorage.setItem("localprice", price);
 }
+function updateRealm(){
+	var unitprice = localStorage.getItem("localunitprice");
+	var region = localStorage.getItem("localregion");
+	var server = localStorage.getItem("localserver");
+	var faction = localStorage.getItem("localfaction");
+	document.getElementById('unitprice').innerHTML = unitprice;
+	document.getElementById('region').innerHTML = region;
+	document.getElementById('server').innerHTML = server;
+	document.getElementById('faction').innerHTML = faction;
+	localStorage.setItem("localregion", region);
+	localStorage.setItem("localserver", server);
+	localStorage.setItem("localfaction", faction);
+	quantPlus();
+}
+
+function banderaFlag(){
+	var region = String(localStorage.getItem("localregion"));
+	if (region = "NA"){
+		document.getElementById('flag').alt = "na-flag";
+		document.getElementById('flag').src = "https://assets.eldorado.gg/images/others/v5/na-flag.png";
+	} if (region = "EU"){
+		document.getElementById('flag').alt = "eu-flag";
+		document.getElementById('flag').src = "https://assets.eldorado.gg/images/others/v5/eu-flag.png";
+	}
+}
+
 
 </script>
 

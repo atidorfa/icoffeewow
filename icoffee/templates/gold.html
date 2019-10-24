@@ -185,6 +185,7 @@ text-transform: capitalize;
 	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
 
 	<title>iCoffee - WoW Classic</title>
+	<link rel="shortcut icon" href="{% static 'img/cof.ico' %}">
 </head>
 <body>
 
@@ -212,15 +213,17 @@ text-transform: capitalize;
 							<div class="navbar-content" _ngcontent-amt-c1=""><!---->
 								<div class="button-wrapper ng-tns-c1-1 ng-star-inserted" _ngcontent-amt-c1="">
 									<eld-shared-button class="ng-tns-c1-1" type="button" _ngcontent-amt-c1="" text="COMMON.SELL" _nghost-amt-c9="">
+									<a href="/gold">
 										<button class="button waves-effect waves-light hyphenate button-gold" type="button" _ngcontent-amt-c9="">
-											<span class="button-text" _ngcontent-amt-c9=""><!----><!----> Gold </span>
+											<span class="button-text" _ngcontent-amt-c9=""><!----><!---->Gold </span>
 										</button>
+									</a>
 									</eld-shared-button>
 								</div>
 								<eld-navbar-links class="ng-tns-c1-1" _ngcontent-amt-c1="" _nghost-amt-c10="">
 									<div class="navbar-links" _ngcontent-amt-c10=""><!----><!---->
-										<a class="navbar-link ng-star-inserted" href="/gold" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/gold"> Buy </a>
-										<a class="navbar-link ng-star-inserted" href="/sell" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/sell"> Sell </a><!----><!----><!----><!----><!----><!---->
+										<a class="navbar-link ng-star-inserted" href="/buy" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/buy"> Buy </a>
+										<a class="navbar-link ng-star-inserted" href="/sell" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/sell"> Sell </a>
 										<a class="navbar-link ng-star-inserted" href="/contact" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/contact"> Contact </a>
 									</div>
 								</eld-navbar-links><!----><!----><!----><!----><!----><!---->
@@ -230,8 +233,8 @@ text-transform: capitalize;
 				</header>
 			</eld-navbar>
 
-<br><br><br><br>
-		<img src="{% static 'assets/img/wow/ragbanner1.png' %}" alt="" class="img-fluid">
+			<br><br><br><br>
+					<img src="{% static 'assets/img/wow/ragbanner1.png' %}" alt="" class="img-fluid">
 
 
 <div class="game-offer-page" style='background-image: url("https://assets.eldorado.gg/images/others/v5/buy-offer-bg.jpg");' _ngcontent-amt-c52="">
@@ -243,8 +246,8 @@ text-transform: capitalize;
 						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
 					</li>
 					<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
-					<li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">US</a></li>
-					<li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">EU</a></li>
+					<li class="filter" data-filter=".us"><a href="#0" data-type="us">US</a></li>
+					<li class="filter" data-filter=".eu"><a href="#0" data-type="eu">EU</a></li>
 				</ul> <!-- cd-filters -->
 			</div> <!-- cd-tab-filter -->
 		</div> <!-- cd-tab-filter-wrapper -->
@@ -252,8 +255,8 @@ text-transform: capitalize;
 		<section class="cd-gallery">
 			<div class="container">
 			<ul>
-				<li class="mix color-1 check1 radio2 option3">
-					<a href="/offer">
+				<li class="mix us check1 radio2 option3">
+					<a onclick="updateData1();" href="/offer">
 					<img src="{% static 'img/goldimg.png' %}" alt="Image 1">
 					</a>
 							<article>
@@ -264,17 +267,17 @@ text-transform: capitalize;
 												<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
 													<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
 														&nbsp;&nbsp;&nbsp;<img class="ng-star-inserted" alt="na-flag" src="https://assets.eldorado.gg/images/others/v5/na-flag.png" _ngcontent-amt-c51="">&nbsp;
-														<span _ngcontent-amt-c51="">NA</span></span>
+														<span id="region1" _ngcontent-amt-c51="">NA</span></span>
 												</eld-shared-trade-env-item>&nbsp;<!---->
 
 													<span class="dot">•</span>&nbsp; <!---->
-													<span server="faerlina">Faerlina</span>&nbsp;<!---->
+													<span id="server1" server="faerlina">Faerlina</span>&nbsp;<!---->
 													<span class="dot">•</span>&nbsp; <!---->
-													<span _ngcontent-ton-c51="">Alliance</span>
+													<span id="faction1" _ngcontent-ton-c51="">Alliance</span>
 
 													<div class="offer-description" _ngcontent-amt-c49="">
 														<p class="offer-amount-col" _ngcontent-amt-c49="">
-														<strong class="offer-price" _ngcontent-amt-c49="">$0.45</strong><!---->
+														<strong class="offer-price" _ngcontent-amt-c49="">$</strong><strong id="unitprice1" class="offer-price" _ngcontent-amt-c49="">0.33</strong><!---->
 															<span class="offer-units ng-star-inserted" _ngcontent-amt-c49="">/ unit</span>
 														</p>
 													</div>
@@ -282,36 +285,155 @@ text-transform: capitalize;
 										</p>
 								</article>
 				</li>
-				<li class="mix color-2 check2 radio2 option2">
-					<a href="/offer">
-					<img src="{% static 'img/goldimg.png' %}" alt="Image 2">
+				<li class="mix us check1 radio2 option3">
+					<a onclick="updateData2();" href="/offer">
+					<img src="{% static 'img/goldimg.png' %}" alt="Image 1">
 					</a>
-					<article>
-						<p class="ng-tns-c50-50">
-							<eld-shared-offer-item-label class="ng-tns-c54-31 ng-tns-c50-33" _nghost-amt-c50="" _ngcontent-amt-c54=""><!---->
-								<div class="offer-label ng-tns-c50-33 ng-trigger ng-trigger-fadeIn ng-star-inserted" _ngcontent-amt-c50="">
-									<p class="ng-tns-c50-33" _ngcontent-amt-c50=""><!----><!---->
-										<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
-											<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
-												&nbsp;&nbsp;&nbsp;<img class="ng-star-inserted" alt="na-flag" src="https://assets.eldorado.gg/images/others/v5/eu-flag.png" _ngcontent-amt-c51="">&nbsp;
-												<span _ngcontent-amt-c51="">EU</span></span>
-										</eld-shared-trade-env-item>&nbsp;<!---->
+							<article>
+								<p class="ng-tns-c50-50">
+									<eld-shared-offer-item-label class="ng-tns-c54-31 ng-tns-c50-33" _nghost-amt-c50="" _ngcontent-amt-c54=""><!---->
+										<div class="offer-label ng-tns-c50-33 ng-trigger ng-trigger-fadeIn ng-star-inserted" _ngcontent-amt-c50="">
+											<p class="ng-tns-c50-33" _ngcontent-amt-c50=""><!----><!---->
+												<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
+													<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
+														&nbsp;&nbsp;&nbsp;<img class="ng-star-inserted" alt="na-flag" src="https://assets.eldorado.gg/images/others/v5/na-flag.png" _ngcontent-amt-c51="">&nbsp;
+														<span id="region2" _ngcontent-amt-c51="">NA</span></span>
+												</eld-shared-trade-env-item>&nbsp;<!---->
 
-											<span class="dot">•</span>&nbsp; <!---->
-											<span server="faerlina">Shazzrah</span>&nbsp;<!---->
-											<span class="dot">•</span>&nbsp; <!---->
-											<span _ngcontent-ton-c51="">Alliance</span>
+													<span class="dot">•</span>&nbsp; <!---->
+													<span id="server2" server="faerlina">Faerlina</span>&nbsp;<!---->
+													<span class="dot">•</span>&nbsp; <!---->
+													<span id="faction2" _ngcontent-ton-c51="">Horde</span>
 
-											<div class="offer-description" _ngcontent-amt-c49="">
-												<p class="offer-amount-col" _ngcontent-amt-c49="">
-												<strong class="offer-price" _ngcontent-amt-c49="">$0.78</strong><!---->
-													<span class="offer-units ng-star-inserted" _ngcontent-amt-c49="">/ unit</span>
+													<div class="offer-description" _ngcontent-amt-c49="">
+														<p class="offer-amount-col" _ngcontent-amt-c49="">
+														<strong class="offer-price" _ngcontent-amt-c49="">$</strong><strong id="unitprice2" class="offer-price" _ngcontent-amt-c49="">0.29</strong><!---->
+															<span class="offer-units ng-star-inserted" _ngcontent-amt-c49="">/ unit</span>
+														</p>
+													</div>
 												</p>
-											</div>
 										</p>
-								</p>
-						</article>
+								</article>
+				</li>
+				<li class="mix us check1 radio2 option3">
+					<a onclick="updateData3();" href="/offer">
+					<img src="{% static 'img/goldimg.png' %}" alt="Image 1">
+					</a>
+							<article>
+								<p class="ng-tns-c50-50">
+									<eld-shared-offer-item-label class="ng-tns-c54-31 ng-tns-c50-33" _nghost-amt-c50="" _ngcontent-amt-c54=""><!---->
+										<div class="offer-label ng-tns-c50-33 ng-trigger ng-trigger-fadeIn ng-star-inserted" _ngcontent-amt-c50="">
+											<p class="ng-tns-c50-33" _ngcontent-amt-c50=""><!----><!---->
+												<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
+													<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
+														&nbsp;&nbsp;&nbsp;<img class="ng-star-inserted" alt="na-flag" src="https://assets.eldorado.gg/images/others/v5/na-flag.png" _ngcontent-amt-c51="">&nbsp;
+														<span id="region3" _ngcontent-amt-c51="">NA</span></span>
+												</eld-shared-trade-env-item>&nbsp;<!---->
 
+													<span class="dot">•</span>&nbsp; <!---->
+													<span id="server3" server="faerlina">Thalnos</span>&nbsp;<!---->
+													<span class="dot">•</span>&nbsp; <!---->
+													<span id="faction3" _ngcontent-ton-c51="">Aliance</span>
+
+													<div class="offer-description" _ngcontent-amt-c49="">
+														<p class="offer-amount-col" _ngcontent-amt-c49="">
+														<strong class="offer-price" _ngcontent-amt-c49="">$</strong><strong id="unitprice3" class="offer-price" _ngcontent-amt-c49="">0.42</strong><!---->
+															<span class="offer-units ng-star-inserted" _ngcontent-amt-c49="">/ unit</span>
+														</p>
+													</div>
+												</p>
+										</p>
+								</article>
+				</li>
+				<li class="mix us check1 radio2 option3">
+					<a onclick="updateData4();" href="/offer">
+					<img src="{% static 'img/goldimg.png' %}" alt="Image 1">
+					</a>
+							<article>
+								<p class="ng-tns-c50-50">
+									<eld-shared-offer-item-label class="ng-tns-c54-31 ng-tns-c50-33" _nghost-amt-c50="" _ngcontent-amt-c54=""><!---->
+										<div class="offer-label ng-tns-c50-33 ng-trigger ng-trigger-fadeIn ng-star-inserted" _ngcontent-amt-c50="">
+											<p class="ng-tns-c50-33" _ngcontent-amt-c50=""><!----><!---->
+												<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
+													<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
+														&nbsp;&nbsp;&nbsp;<img class="ng-star-inserted" alt="na-flag" src="https://assets.eldorado.gg/images/others/v5/na-flag.png" _ngcontent-amt-c51="">&nbsp;
+														<span id="region4" _ngcontent-amt-c51="">NA</span></span>
+												</eld-shared-trade-env-item>&nbsp;<!---->
+
+													<span class="dot">•</span>&nbsp; <!---->
+													<span id="server4" server="faerlina">Thalnos</span>&nbsp;<!---->
+													<span class="dot">•</span>&nbsp; <!---->
+													<span id="faction4" _ngcontent-ton-c51="">Horde</span>
+
+													<div class="offer-description" _ngcontent-amt-c49="">
+														<p class="offer-amount-col" _ngcontent-amt-c49="">
+														<strong class="offer-price" _ngcontent-amt-c49="">$</strong><strong id="unitprice4" class="offer-price" _ngcontent-amt-c49="">0.38</strong><!---->
+															<span class="offer-units ng-star-inserted" _ngcontent-amt-c49="">/ unit</span>
+														</p>
+													</div>
+												</p>
+										</p>
+								</article>
+				</li>
+				<li class="mix eu check1 radio2 option3">
+					<a onclick="updateData5();" href="/offer">
+					<img src="{% static 'img/goldimg.png' %}" alt="Image 1">
+					</a>
+							<article>
+								<p class="ng-tns-c50-50">
+									<eld-shared-offer-item-label class="ng-tns-c54-31 ng-tns-c50-33" _nghost-amt-c50="" _ngcontent-amt-c54=""><!---->
+										<div class="offer-label ng-tns-c50-33 ng-trigger ng-trigger-fadeIn ng-star-inserted" _ngcontent-amt-c50="">
+											<p class="ng-tns-c50-33" _ngcontent-amt-c50=""><!----><!---->
+												<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
+													<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
+														&nbsp;&nbsp;&nbsp;<img class="ng-star-inserted" alt="eu-flag" src="https://assets.eldorado.gg/images/others/v5/eu-flag.png" _ngcontent-amt-c51="">&nbsp;
+														<span id="region5" _ngcontent-amt-c51="">EU</span></span>
+												</eld-shared-trade-env-item>&nbsp;<!---->
+
+													<span class="dot">•</span>&nbsp; <!---->
+													<span id="server5" server="faerlina">Shazzrah</span>&nbsp;<!---->
+													<span class="dot">•</span>&nbsp; <!---->
+													<span id="faction5" _ngcontent-ton-c51="">Alliance</span>
+
+													<div class="offer-description" _ngcontent-amt-c49="">
+														<p class="offer-amount-col" _ngcontent-amt-c49="">
+														<strong class="offer-price" _ngcontent-amt-c49="">$</strong><strong id="unitprice5" class="offer-price" _ngcontent-amt-c49="">0.57</strong><!---->
+															<span class="offer-units ng-star-inserted" _ngcontent-amt-c49="">/ unit</span>
+														</p>
+													</div>
+												</p>
+										</p>
+								</article>
+				</li>
+				<li class="mix eu check1 radio2 option3">
+					<a onclick="updateData6();" href="/offer">
+					<img src="{% static 'img/goldimg.png' %}" alt="Image 1">
+					</a>
+							<article>
+								<p class="ng-tns-c50-50">
+									<eld-shared-offer-item-label class="ng-tns-c54-31 ng-tns-c50-33" _nghost-amt-c50="" _ngcontent-amt-c54=""><!---->
+										<div class="offer-label ng-tns-c50-33 ng-trigger ng-trigger-fadeIn ng-star-inserted" _ngcontent-amt-c50="">
+											<p class="ng-tns-c50-33" _ngcontent-amt-c50=""><!----><!---->
+												<eld-shared-trade-env-item class="ng-tns-c50-33 ng-star-inserted" _ngcontent-amt-c50="" _nghost-amt-c51="">
+													<span class="trade-env-item" _ngcontent-amt-c51=""><!----><!----><!----><!----><!---->
+														&nbsp;&nbsp;&nbsp;<img class="ng-star-inserted" alt="eu-flag" src="https://assets.eldorado.gg/images/others/v5/eu-flag.png" _ngcontent-amt-c51="">&nbsp;
+														<span id="region6" _ngcontent-amt-c51="">EU</span></span>
+												</eld-shared-trade-env-item>&nbsp;<!---->
+
+													<span class="dot">•</span>&nbsp; <!---->
+													<span id="server6" server="faerlina">Shazzrah</span>&nbsp;<!---->
+													<span class="dot">•</span>&nbsp; <!---->
+													<span id="faction6" _ngcontent-ton-c51="">Horde</span>
+
+													<div class="offer-description" _ngcontent-amt-c49="">
+														<p class="offer-amount-col" _ngcontent-amt-c49="">
+														<strong class="offer-price" _ngcontent-amt-c49="">$</strong><strong id="unitprice6" class="offer-price" _ngcontent-amt-c49="">0.59</strong><!---->
+															<span class="offer-units ng-star-inserted" _ngcontent-amt-c49="">/ unit</span>
+														</p>
+													</div>
+												</p>
+										</p>
+								</article>
 				</li>
 
 				<li class="gap"></li>
@@ -399,8 +521,80 @@ text-transform: capitalize;
 
 
 
+<script>
+	function updateData1(){
+
+		var unitprice = document.getElementById('unitprice1').innerHTML;
+		var region = document.getElementById('region1').innerHTML;
+		var server = document.getElementById('server1').innerHTML;
+		var faction = document.getElementById('faction1').innerHTML;
+		localStorage.setItem("localunitprice", unitprice);
+		localStorage.setItem("localregion", region);
+		localStorage.setItem("localserver", server);
+		localStorage.setItem("localfaction", faction);
+	}
+
+	function updateData2(){
+
+		var unitprice = document.getElementById('unitprice2').innerHTML;
+		var region = document.getElementById('region2').innerHTML;
+		var server = document.getElementById('server2').innerHTML;
+		var faction = document.getElementById('faction2').innerHTML;
+		localStorage.setItem("localunitprice", unitprice);
+		localStorage.setItem("localregion", region);
+		localStorage.setItem("localserver", server);
+		localStorage.setItem("localfaction", faction);
+	}
 
 
+	function updateData3(){
+
+		var unitprice = document.getElementById('unitprice3').innerHTML;
+		var region = document.getElementById('region3').innerHTML;
+		var server = document.getElementById('server3').innerHTML;
+		var faction = document.getElementById('faction3').innerHTML;
+		localStorage.setItem("localunitprice", unitprice);
+		localStorage.setItem("localregion", region);
+		localStorage.setItem("localserver", server);
+		localStorage.setItem("localfaction", faction);
+	}
+
+	function updateData4(){
+
+		var unitprice = document.getElementById('unitprice4').innerHTML;
+		var region = document.getElementById('region4').innerHTML;
+		var server = document.getElementById('server4').innerHTML;
+		var faction = document.getElementById('faction4').innerHTML;
+		localStorage.setItem("localunitprice", unitprice);
+		localStorage.setItem("localregion", region);
+		localStorage.setItem("localserver", server);
+		localStorage.setItem("localfaction", faction);
+	}
+
+	function updateData5(){
+
+		var unitprice = document.getElementById('unitprice5').innerHTML;
+		var region = document.getElementById('region5').innerHTML;
+		var server = document.getElementById('server5').innerHTML;
+		var faction = document.getElementById('faction5').innerHTML;
+		localStorage.setItem("localunitprice", unitprice);
+		localStorage.setItem("localregion", region);
+		localStorage.setItem("localserver", server);
+		localStorage.setItem("localfaction", faction);
+	}
+
+	function updateData6(){
+
+		var unitprice = document.getElementById('unitprice6').innerHTML;
+		var region = document.getElementById('region6').innerHTML;
+		var server = document.getElementById('server6').innerHTML;
+		var faction = document.getElementById('faction6').innerHTML;
+		localStorage.setItem("localunitprice", unitprice);
+		localStorage.setItem("localregion", region);
+		localStorage.setItem("localserver", server);
+		localStorage.setItem("localfaction", faction);
+	}
+</script>
 
 
 

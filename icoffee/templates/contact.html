@@ -1,0 +1,248 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en" class="no-js">
+<style>
+
+[_ngcontent-amt-c50].offer-label p[_ngcontent-amt-c50] {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 16px;
+	color: #2d2e3f;
+	font-weight: 400;
+	font-family: "Maison Neue",sans-serif;
+	font-size: 14px;
+}
+[_ngcontent-amt-c51].trade-env-item {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: start;
+	align-items: flex-start;
+	font-size: 14px;
+	line-height: 16px;
+	color: #4a4a5d;
+}
+* {
+margin: 0;
+padding: 0;
+outline: 0;
+box-sizing: border-box;
+}
+p {
+line-height: 21px;
+font-size: 14px;
+}
+[_ngcontent-amt-c49].offer-amount-col {
+padding-top: 5px;
+}
+[_ngcontent-amt-c49].offer-description {
+padding: 10px 20px;
+-webkit-transition: .3s;
+transition: all .3s ease;
+}
+a {
+font-size: 14px;
+color: #2b8ced;
+text-decoration: none;
+-webkit-transition: .2s;
+transition: all .2s ease;
+}
+a[_ngcontent-amt-c49] {
+color: inherit;
+text-decoration: none;
+}
+[_ngcontent-amt-c49].offer-box {
+width: 255px;
+height: calc(100% - 30px);
+margin-bottom: 30px;
+background-color: #fff;
+border: 1px solid #e9e9ee;
+-webkit-transition: .3s;
+transition: all .3s ease;
+overflow: hidden;
+border-radius: 3px;
+}
+.col {
+padding: 0 15px;
+}
+.row {
+margin-left: -15px;
+margin-right: -15px;
+}
+[_ngcontent-amt-c39].offers {
+width: 100%;
+display: -webkit-box;
+display: flex;
+-webkit-box-pack: start;
+justify-content: flex-start;
+flex-wrap: wrap;
+}
+[_nghost-amt-c39] {
+display: -webkit-box;
+display: flex;
+-webkit-box-pack: start;
+justify-content: flex-start;
+}
+.base-container {
+width: 1140px;
+max-width: 100%;
+padding: 0 15px;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+}
+[_ngcontent-amt-c35].base-container {
+width: 1170px;
+padding: 0 0 0 30px;
+}
+section {
+padding: 50px 0;
+}
+section[_ngcontent-amt-c35] {
+position: relative;
+padding-top: 0px;
+background-repeat: no-repeat;
+background-position: top center;
+background-size: 100%;
+min-height: 400px;
+}
+[_ngcontent-amt-c35].game-page {
+height: 100.1%;
+}
+[_ngcontent-amt-c0].router-outlet-wrapper {
+-webkit-box-flex: 1;
+flex: 1 0 auto;
+}
+[_ngcontent-amt-c0].main-content {
+position: relative;
+margin-top: 60px;
+margin-left: 70px;
+z-index: 1;
+display: -webkit-box;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+flex-direction: column;
+height: 100%;
+min-height: calc(100vh - 60px);
+overflow: auto;
+-webkit-overflow-scrolling: touch;
+-webkit-transition: .2s;
+transition: .2s;
+}
+[_ngcontent-amt-c0].main-content.sidenav-not-visible {
+margin-left: 0px;
+}
+[_ngcontent-amt-c0].page-container {
+z-index: 1;
+display: block;
+overflow: hidden;
+-webkit-overflow-scrolling: touch;
+background-color: #fafafa;
+color: #4a4a5d;
+-webkit-transition: .2s;
+transition: .2s;
+}
+body {
+background: #fafafa;
+}
+body {
+height: 100%;
+font-family: "Maison Neue",sans-serif;
+font-weight: 400;
+color: #4a4a5d;
+background: #fafafa;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+}
+html {
+height: 100%;
+box-sizing: border-box;
+}
+[_ngcontent-amt-c49].offer-price {
+font-size: 18px;
+line-height: 25px;
+color: #36af47;
+margin-right: 3px;
+}
+[_ngcontent-amt-c49].offer-units {
+font-size: 12px;
+color: #6b6b7e;
+text-transform: capitalize;
+}
+
+</style>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+
+	<link rel="stylesheet" href="{% static 'dorado/dorado.css' %}">
+
+	<title>iCoffee - WoW Classic</title>
+	<link rel="shortcut icon" href="{% static 'img/cof.ico' %}">
+</head>
+<body>
+
+	<eld-root class="ng-tns-c0-0" _nghost-amt-c0="" ng-version="8.1.3">
+		<eld-navbar class="header ng-tns-c1-1" _ngcontent-amt-c0="" _nghost-amt-c1="">
+			<header class="ng-tns-c1-1" _ngcontent-amt-c1="">
+				<div class="app-header ng-trigger ng-trigger-fadeIn" style="animation-play-state: running;" _ngcontent-amt-c1="">
+					<eld-refresh-page-message class="ng-tns-c1-1 ng-tns-c6-4" _ngcontent-amt-c1="" _nghost-amt-c6=""><!----></eld-refresh-page-message>
+
+					<nav class="ng-tns-c1-1" _ngcontent-amt-c1="">
+						<div class="left-nav-side" _ngcontent-amt-c1="">
+							<eld-site-logo class="ng-tns-c1-1" _ngcontent-amt-c1="" _nghost-amt-c7="">
+								<a class="brand-logo" href="/" _ngcontent-amt-c7="">
+									<div class="brand-icon" _ngcontent-amt-c7=""><!---->
+										<eld-shared-svg-logo-with-text class="ng-star-inserted" _ngcontent-amt-c7="" _nghost-amt-c20="">
+											<img src="{% static 'img/cafe6.png' %}" alt="" class="img-fluid" style="width:50px;height:50px;">
+									</div>
+								</a>
+							</eld-site-logo>
+							<eld-categories-menu class="ng-tns-c1-1 ng-tns-c8-5" _ngcontent-amt-c1="" _nghost-amt-c8="">
+								<div class="categories-menu" _ngcontent-amt-c8=""><!----><!----><!---->
+
+								</eld-categories-menu>
+							</div>
+							<div class="navbar-content" _ngcontent-amt-c1=""><!---->
+								<div class="button-wrapper ng-tns-c1-1 ng-star-inserted" _ngcontent-amt-c1="">
+									<eld-shared-button class="ng-tns-c1-1" type="button" _ngcontent-amt-c1="" text="COMMON.SELL" _nghost-amt-c9="">
+									<a href="/gold">
+										<button class="button waves-effect waves-light hyphenate button-gold" type="button" _ngcontent-amt-c9="">
+											<span class="button-text" _ngcontent-amt-c9=""><!----><!---->Gold </span>
+										</button>
+									</a>
+									</eld-shared-button>
+								</div>
+								<eld-navbar-links class="ng-tns-c1-1" _ngcontent-amt-c1="" _nghost-amt-c10="">
+									<div class="navbar-links" _ngcontent-amt-c10=""><!----><!---->
+										<a class="navbar-link ng-star-inserted" href="/buy" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/buy"> Buy </a>
+										<a class="navbar-link ng-star-inserted" href="/sell" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/sell"> Sell </a>
+										<a class="navbar-link ng-star-inserted" href="/contact" _ngcontent-amt-c10="" routerlinkactive="router-link-active" routerlink="/contact"> Contact </a>
+									</div>
+								</eld-navbar-links><!----><!----><!----><!----><!----><!---->
+							</div>
+						</nav>
+					</div>
+				</header>
+			</eld-navbar>
+
+<br><br><br><br>
+
+
+
+
+
+
+
+
+<script src="{% static 'filter/js/jquery-2.1.1.js' %}"></script>
+<script src="{% static 'filter/js/jquery.mixitup.min.js' %}"></script>
+<script src="{% static 'filter/js/main.js' %}"></script> <!-- Resource jQuery -->
+</body>
+
+<br><br>
+</html>
