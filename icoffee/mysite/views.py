@@ -42,3 +42,6 @@ def sell(request):
 
 def contact(request):
         return render(request, 'contact.html')
+
+def mercadopago(request):
+        return render(request, 'mercadopago.html')
