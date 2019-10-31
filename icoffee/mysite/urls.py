@@ -15,5 +15,6 @@ urlpatterns = [
     path('summary', views.summary, name='summary'),
     path('buy', views.buy, name='buy'),
     path('sell', views.sell, name='sell'),
-    path('contact', views.contact, name='contact')
+    path('contact', views.contact, name='contact'),
+    path('mercadopago', views.mercadopago, name='mercadopago')
 ]
